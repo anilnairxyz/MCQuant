@@ -3,6 +3,7 @@
 ## ############################################################################################# ##
 import math
 import csv
+import matplotlib.pyplot as     plt
 
 ## ********************************************************************************************* ##
 ## CSV Related
@@ -103,3 +104,15 @@ def rolling_regress(data, window):
     for i in range(0, len(data)-window+1):
         rpred.append(regpred(data[i:i+window])) 
     return rpred    
+
+## Plots
+## ================================================ ##
+def plot_df(df, x, y, z, title):
+    cols        = y
+    cols.append(x)
+    cols.extend(z)
+    df          = df[cols]
+    df          = df.set_index([x])
+    df.plot(title=title,figsize=(15,7), secondary_y=z, linewidth=2)
+    plt.grid(True)
+    plt.show()
