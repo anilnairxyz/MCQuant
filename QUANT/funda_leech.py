@@ -61,25 +61,30 @@ def parse_quarterly(html):
     return reports
 
 
-def funda_leech(symbol, mode='C', rep='A'):
+def funda_leech(symbol, mode='C', r='A'):
     """
     :param stocks: list of stocks
     :param mode: 'A' - All the historic data
                  'C' - Last five quarters
+    :param r: 'C' - Consolidated
+              'S' - Standalone
+              'A' - Try both
+              'F' - Find in Catalog
     :param date: Date used in the modes             
     """
-    catalog = x4fns.read_csv(EQCatalog)
+    catalog   = x4fns.read_csv(EQCatalog)
 
-    catrow   = [x for x in catalog if x[PCAT['NSECODE']]==symbol][0]
-    mccode   = catrow[PCAT['FCODE']]
-    try_qty  = True if rep == 'A' else False
-    report   = 'quarterly' if rep == 'S' else 'cons_quarterly'
-    nav      = 'curr'
-    start    = str(now.year)+now.strftime('%m')
-    end      = str(now.year)+now.strftime('%m')
-    maxy     = str(now.year)+now.strftime('%m')
+    catrow    = [x for x in catalog if x[PCAT['NSECODE']]==symbol][0]
+    mccode    = catrow[PCAT['FCODE']]
+    rep       = catrow[PCAT['CONS']] if r=='F' else r
+    try_qty   = True if rep == 'A' else False
+    report    = 'quarterly' if rep == 'S' else 'cons_quarterly'
+    nav       = 'curr'
+    start     = str(now.year)+now.strftime('%m')
+    end       = str(now.year)+now.strftime('%m')
+    maxy      = str(now.year)+now.strftime('%m')
     print (symbol, mccode)
-    cum_fund = []
+    cum_funda = []
 
     while True:
         params = {'nav':nav,'type':report,'sc_did':mccode,'start_year':start,'end_year':end,'max_year':maxy}
@@ -90,10 +95,10 @@ def funda_leech(symbol, mode='C', rep='A'):
             html     = response.content
             fundas   = parse_quarterly(html)
             if (not len(fundas)) and (try_qty):
-                report  = 'quarterly'
-                try_qty = False
+                report       = 'quarterly'
+                try_qty      = False
             elif len(fundas):
-                cum_fund.extend(fundas)
+                cum_funda.extend(fundas)
                 if (mode == 'C'):
                     break
                 else:
@@ -101,12 +106,12 @@ def funda_leech(symbol, mode='C', rep='A'):
                     lastqtr  = fundas[-1][1]
                     nav      = 'next'
                     end      = str(lastyear)+'{0:0=2d}'.format(lastqtr*3)
-                try_qty = False
+                try_qty      = False
             else:
                 break
         else:
             break
-    return cum_fund
+    return cum_funda
 
 
 if __name__ == '__main__':
@@ -117,13 +122,6 @@ if __name__ == '__main__':
     parser.add_argument("report", help="C - Consolidated, S - Standalone, F - Find, A - Both")
     args   = parser.parse_args()
     rev_qtr   = ['Mar', 'Jun', 'Sep', 'Dec']
-
-    if args.report == 'F':
-        catalog  = x4fns.read_csv(EQCatalog)
-        catrow   = [x for x in catalog if x[PCAT['NSECODE']]==args.stock][0]
-        report   = catrow[PCAT['CONS']]
-    else:
-        report   = args.report
 
     funda_file = FUNDADIR+args.stock+CSV
     if args.mode == 'A':
