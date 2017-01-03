@@ -70,7 +70,6 @@ def funda_leech(symbol, mode='C', rep='A'):
     """
     catalog = x4fns.read_csv(EQCatalog)
 
-    url      = FUNDAURL
     catrow   = [x for x in catalog if x[PCAT['NSECODE']]==symbol][0]
     mccode   = catrow[PCAT['FCODE']]
     try_qty  = True if rep == 'A' else False
@@ -87,7 +86,7 @@ def funda_leech(symbol, mode='C', rep='A'):
         
         # fetch the data
         if True:
-            response = requests.post(url, data=params)
+            response = requests.post(FUNDAURL, data=params)
             html     = response.content
             fundas   = parse_quarterly(html)
             if (not len(fundas)) and (try_qty):
@@ -114,20 +113,34 @@ if __name__ == '__main__':
 
     parser = argparse.ArgumentParser("Leech Stock Prices from MC")
     parser.add_argument("stock", help="name of stock")
-    parser.add_argument("report", help="C - Consolidated, S - Standalone, A - Both")
+    parser.add_argument("mode", help="A - All historic data, 'C' - Only update latest")
+    parser.add_argument("report", help="C - Consolidated, S - Standalone, F - Find, A - Both")
     args   = parser.parse_args()
     rev_qtr   = ['Mar', 'Jun', 'Sep', 'Dec']
 
+    if args.report == 'F':
+        catalog  = x4fns.read_csv(EQCatalog)
+        catrow   = [x for x in catalog if x[PCAT['NSECODE']]==args.stock][0]
+        report   = catrow[PCAT['CONS']]
+    else:
+        report   = args.report
+
     funda_file = FUNDADIR+args.stock+CSV
-    existing   = x4fns.read_csv(funda_file)
-    l_year     = existing[0][0]
-    l_qtr      = int(existing[0][1])
-    l_mth      = rev_qtr[l_qtr-1]
-    l_date     = datetime.strptime(l_mth+' 30 '+l_year, '%b %d %Y')
-    if ((now - l_date).days) > 105:
+    if args.mode == 'A':
         tocsv      = [['YEAR','QTR','SALES','INCOME','OPP','PAT']]
-        funda      = funda_leech(args.stock, mode='C', rep=args.report)
-        funda      = [x for x in funda if (x[0]>int(l_year)) or ((x[0] == int(l_year)) and (x[1] > l_qtr))]
+        funda      = funda_leech(args.stock, mode='A', rep=args.report)
         tocsv.extend(funda)
-        tocsv.extend(existing)
         x4fns.write_csv(funda_file, tocsv, 'w')
+    else:
+        existing   = x4fns.read_csv(funda_file)
+        l_year     = existing[0][0]
+        l_qtr      = int(existing[0][1])
+        l_mth      = rev_qtr[l_qtr-1]
+        l_date     = datetime.strptime(l_mth+' 30 '+l_year, '%b %d %Y')
+        if ((now - l_date).days) > 105:
+            tocsv      = [['YEAR','QTR','SALES','INCOME','OPP','PAT']]
+            funda      = funda_leech(args.stock, mode='C', rep=args.report)
+            funda      = [x for x in funda if (x[0]>int(l_year)) or ((x[0] == int(l_year)) and (x[1] > l_qtr))]
+            tocsv.extend(funda)
+            tocsv.extend(existing)
+            x4fns.write_csv(funda_file, tocsv, 'w')

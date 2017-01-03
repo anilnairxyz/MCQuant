@@ -48,8 +48,8 @@ if __name__ == '__main__':
     parser.add_argument("mode", help="H - Historic, D - Daily, W - Weekly, A - All")
     args   = parser.parse_args()
     if args.mode in ('H', 'D', 'W'):
-        tech_leech(args.mode, stock)
+        tech_leech(args.mode, args.stock)
     else:
-        tech_leech('H', stock)
-        tech_leech('W', stock)
-        tech_leech('D', stock)
+        tech_leech('H', args.stock)
+        tech_leech('W', args.stock)
+        tech_leech('D', args.stock)
