@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 import requests
+import argparse
 import sys
 import csv 
 import math
@@ -10,9 +11,7 @@ from dateutil import parser
 from x4defs import *
 import x4fns
 
-qtr_defs  = {'Mar': 1, 'Jun':2, 'Sep':3, 'Dec':4}
-rev_qtr   = ['Mar', 'Jun', 'Sep', 'Dec']
-now = datetime.now()
+now       = datetime.now()
 
 def get_values(cells, pattern, cols):
     marker = 0
@@ -34,6 +33,7 @@ def get_values(cells, pattern, cols):
 
 
 def parse_quarterly(html):
+    qtr_defs  = {'Mar': 1, 'Jun':2, 'Sep':3, 'Dec':4}
     period_re = re.compile("(Mar|Jun|Sep|Dec) '([0-1][0-9])")
     sales_re  = re.compile('[Nn]et [Ss]ales/[Ii]ncome [Ff]rom [Oo]perations')
     incom_re  = re.compile('[Tt]otal [Ii]ncome [Ff]rom [Oo]perations')
@@ -111,22 +111,23 @@ def funda_leech(symbol, mode='C', rep='A'):
 
 
 if __name__ == '__main__':
-    # Read the source file which contains all the details on the stocks
-    catalog = x4fns.read_csv(EQCatalog)
-    stocks  = [x[PCAT['NSECODE']] for x in catalog]
-    cons    = [x[PCAT['CONS']] for x in catalog]
 
-    for i, stock in enumerate(stocks):
-        funda_file = FUNDADIR+stock+CSV
-        existing   = x4fns.read_csv(funda_file)
-        l_year     = existing[0][0]
-        l_qtr      = int(existing[0][1])
-        l_mth      = rev_qtr[l_qtr-1]
-        l_date     = datetime.strptime(l_mth+' 30 '+l_year, '%b %d %Y')
-        if ((now - l_date).days) > 105:
-            tocsv      = [['YEAR','QTR','SALES','INCOME','OPP','PAT']]
-            funda      = funda_leech(stock, mode='C', rep=cons[i])
-            funda      = [x for x in funda if (x[0]>int(l_year)) or ((x[0] == int(l_year)) and (x[1] > l_qtr))]
-            tocsv.extend(funda)
-            tocsv.extend(existing)
-            x4fns.write_csv(funda_file, tocsv, 'w')
+    parser = argparse.ArgumentParser("Leech Stock Prices from MC")
+    parser.add_argument("stock", help="name of stock")
+    parser.add_argument("report", help="C - Consolidated, S - Standalone, A - Both")
+    args   = parser.parse_args()
+    rev_qtr   = ['Mar', 'Jun', 'Sep', 'Dec']
+
+    funda_file = FUNDADIR+args.stock+CSV
+    existing   = x4fns.read_csv(funda_file)
+    l_year     = existing[0][0]
+    l_qtr      = int(existing[0][1])
+    l_mth      = rev_qtr[l_qtr-1]
+    l_date     = datetime.strptime(l_mth+' 30 '+l_year, '%b %d %Y')
+    if ((now - l_date).days) > 105:
+        tocsv      = [['YEAR','QTR','SALES','INCOME','OPP','PAT']]
+        funda      = funda_leech(args.stock, mode='C', rep=args.report)
+        funda      = [x for x in funda if (x[0]>int(l_year)) or ((x[0] == int(l_year)) and (x[1] > l_qtr))]
+        tocsv.extend(funda)
+        tocsv.extend(existing)
+        x4fns.write_csv(funda_file, tocsv, 'w')

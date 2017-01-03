@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 import requests
+import argparse
 import sys
 import csv 
 import math
@@ -8,7 +9,7 @@ from dateutil import parser
 from x4defs import *
 import x4fns
 
-def tech_leech(mode, stocks):
+def tech_leech(mode, stock):
 
     # Read the source file which contains all the details on the stocks
     catalog = x4fns.read_csv(EQCatalog)
@@ -23,33 +24,32 @@ def tech_leech(mode, stocks):
         mc_url = DAYURL
         output_dir = DAYDIR
     
-    for symbol in stocks:
-        
-        if symbol != 'NIFTY':
-            catrow = [x for x in catalog if x[PCAT['NSECODE']]==symbol][0]
-            mc_code = catrow[PCAT['MCCODE']]
-        else:
-            mc_code = 'nifty'
-        url = mc_url+mc_code+'.csv'
+    if stock != 'NIFTY':
+        catrow = [x for x in catalog if x[PCAT['NSECODE']]==stock][0]
+        mc_code = catrow[PCAT['MCCODE']]
+    else:
+        mc_code = 'nifty'
+    url = mc_url+mc_code+'.csv'
     
-        # fetch the data
-        response = requests.get(url)
-        html = response.content
-        
-        #create the output file
-        output_file = open(output_dir+symbol+'.csv', "w+")
-    
-        #write to the respective files
-        html = html.decode('utf-8')
-        output_file.write(html)
-        output_file.close()
+    # fetch the data
+    response = requests.get(url)
+    html = response.content
+    #create the output file
+    output_file = open(output_dir+stock+CSV, "w+")
+    #write to the respective files
+    html = html.decode('utf-8')
+    output_file.write(html)
+    output_file.close()
 
 if __name__ == '__main__':
     
-#    # Read the source file which contains all the details on the stocks
-    catalog = x4fns.read_csv(EQCatalog)
-    stocks  = [x[PCAT['NSECODE']] for x in catalog]
-    stocks.append('NIFTY')
-    tech_leech('H', stocks)
-#    tech_leech('W', stocks)
-#    tech_leech('D', stocks)
+    parser = argparse.ArgumentParser("Leech Stock Prices from MC")
+    parser.add_argument("stock", help="name of stock")
+    parser.add_argument("mode", help="H - Historic, D - Daily, W - Weekly, A - All")
+    args   = parser.parse_args()
+    if args.mode in ('H', 'D', 'W'):
+        tech_leech(args.mode, stock)
+    else:
+        tech_leech('H', stock)
+        tech_leech('W', stock)
+        tech_leech('D', stock)
