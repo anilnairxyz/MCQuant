@@ -52,19 +52,41 @@ if __name__ == '__main__':
     expanded    = expand_funda(annualized, args.stock, dates)
     df          = pd.DataFrame(expanded, columns=HFUNDA)
     df['PRICE'] = close
-    if args.value == 'S':
-        df['RATIO'] = df['PRICE'] / df['SALES']
-    elif args.value == 'I':
-        df['RATIO'] = df['PRICE'] / df['INCOME']
-    elif args.value == 'O':
-        df['RATIO'] = df['PRICE'] / df['OPP']
+    title       = ['-']*4
+    if 'S' in args.value:
+        df['RATIO_S'] = df['PRICE'] / df['SALES']
+        df['MEAN_S']  = df['RATIO_S'].mean()
+        df['UPPER_S'] = df['MEAN_S'] + df['RATIO_S'].std()
+        df['LOWER_S'] = df['MEAN_S'] - df['RATIO_S'].std() 
+        A = {'X': 'DATE', 'Y': ['RATIO_S', 'MEAN_S', 'UPPER_S', 'LOWER_S'], 'Z': ['PRICE']}
+        title[0]      = args.stock+' Sales'
     else:
-        df['RATIO'] = df['PRICE'] / df['PAT']
-    df['MEAN']  = df['RATIO'].mean()
-    df['UPPER'] = df['MEAN'] + df['RATIO'].std()
-    df['LOWER'] = df['MEAN'] - df['RATIO'].std() 
-#    last_close  = close[-1]
-#    last_ratio  = df['RATIO'].iloc[-1]
-#    print (last_close, last_ratio)
-    x4fns.plot_df(df, 'DATE', ['RATIO', 'MEAN', 'UPPER', 'LOWER'], ['PRICE'], args.stock)
-#    x4fns.write_csv('aaa.csv', annualized, 'w')
+        A = {}
+    if 'I' in args.value:
+        df['RATIO_I'] = df['PRICE'] / df['INCOME']
+        df['MEAN_I']  = df['RATIO_I'].mean()
+        df['UPPER_I'] = df['MEAN_I'] + df['RATIO_I'].std()
+        df['LOWER_I'] = df['MEAN_I'] - df['RATIO_I'].std() 
+        B = {'X': 'DATE', 'Y': ['RATIO_I', 'MEAN_I', 'UPPER_I', 'LOWER_I'], 'Z': ['PRICE']}
+        title[1]      = args.stock+' Income'
+    else:
+        B = {}
+    if 'O' in args.value:
+        df['RATIO_O'] = df['PRICE'] / df['OPP']
+        df['MEAN_O']  = df['RATIO_O'].mean()
+        df['UPPER_O'] = df['MEAN_O'] + df['RATIO_O'].std()
+        df['LOWER_O'] = df['MEAN_O'] - df['RATIO_O'].std() 
+        C = {'X': 'DATE', 'Y': ['RATIO_O', 'MEAN_O', 'UPPER_O', 'LOWER_O'], 'Z': ['PRICE']}
+        title[2]      = args.stock+' OpP'
+    else:
+        C = {}
+    if 'P' in args.value:
+        df['RATIO_P'] = df['PRICE'] / df['PAT']
+        df['MEAN_P']  = df['RATIO_P'].mean()
+        df['UPPER_P'] = df['MEAN_P'] + df['RATIO_P'].std()
+        df['LOWER_P'] = df['MEAN_P'] - df['RATIO_P'].std() 
+        D = {'X': 'DATE', 'Y': ['RATIO_P', 'MEAN_P', 'UPPER_P', 'LOWER_P'], 'Z': ['PRICE']}
+        title[3]      = args.stock+' PAT'
+    else:
+        D = {}
+    x4fns.multiplot_df(df, title, A=A, B=B, C=C, D=D)

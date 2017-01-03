@@ -107,12 +107,47 @@ def rolling_regress(data, window):
 
 ## Plots
 ## ================================================ ##
-def plot_df(df, x, y, z, title):
+def plot_df(df, title, x, y, z=[]):
     cols        = y
     cols.append(x)
     cols.extend(z)
     df          = df[cols]
     df          = df.set_index([x])
     df.plot(title=title,figsize=(15,7), secondary_y=z, linewidth=2)
+    plt.grid(True)
+    plt.show()
+
+## Multiple Plots
+## ================================================ ##
+def multiplot_df(df, title, A={}, B={}, C={}, D={}):
+    fig, axes = plt.subplots(nrows=2, ncols=2, figsize=(20,12))
+    if A:
+        cols        = A['Y']
+        cols.append(A['X'])
+        cols.extend(A['Z'])
+        adf         = df[cols]
+        adf         = adf.set_index([A['X']])
+        adf.plot(title=title[0], secondary_y=A['Z'], linewidth=2, legend=None, ax=axes[0,0])
+    if B:
+        cols        = B['Y']
+        cols.append(B['X'])
+        cols.extend(B['Z'])
+        bdf         = df[cols]
+        bdf         = bdf.set_index([B['X']])
+        bdf.plot(title=title[1], secondary_y=B['Z'], linewidth=2, legend=None, ax=axes[0,1])
+    if C:
+        cols        = C['Y']
+        cols.append(C['X'])
+        cols.extend(C['Z'])
+        cdf         = df[cols]
+        cdf         = cdf.set_index([C['X']])
+        cdf.plot(title=title[2], secondary_y=C['Z'], linewidth=2, legend=None, ax=axes[1,0])
+    if D:
+        cols        = D['Y']
+        cols.append(D['X'])
+        cols.extend(D['Z'])
+        ddf         = df[cols]
+        ddf         = ddf.set_index([D['X']])
+        ddf.plot(title=title[3], secondary_y=D['Z'], linewidth=2, legend=None, ax=axes[1,1])
     plt.grid(True)
     plt.show()
