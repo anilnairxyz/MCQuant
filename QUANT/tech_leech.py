@@ -9,7 +9,7 @@ from dateutil import parser
 from x4defs import *
 import x4fns
 
-def tech_leech(mode, stock):
+def tech_leech(stock, mode):
 
     # Read the source file which contains all the details on the stocks
     catalog = x4fns.read_csv(EQCatalog)
@@ -48,8 +48,8 @@ if __name__ == '__main__':
     parser.add_argument("mode", help="H - Historic, D - Daily, W - Weekly, A - All")
     args   = parser.parse_args()
     if args.mode in ('H', 'D', 'W'):
-        tech_leech(args.mode, args.stock)
+        tech_leech(args.stock, args.mode)
     else:
-        tech_leech('H', args.stock)
-        tech_leech('W', args.stock)
-        tech_leech('D', args.stock)
+        tech_leech(args.stock, 'H')
+        tech_leech(args.stock, 'W')
+        tech_leech(args.stock, 'D')
