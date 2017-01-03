@@ -12,6 +12,9 @@ from x4defs import *
 import x4fns
 from tech_leech import *
 from funda_leech import *
+from funda_anal import *
+
+# Parameters 
 
 if __name__ == '__main__':
 
@@ -46,24 +49,6 @@ if __name__ == '__main__':
             if 'F' in args.leech:
 #                funda_leech(stock, 'C', 'F')
                 print ("Leech Fundamentals")
-
-
-#    cons    = [x[PCAT['CONS']] for x in catalog]
-#
-#    for i, stock in enumerate(stocks):
-#        funda_file = FUNDADIR+stock+CSV
-#        existing   = x4fns.read_csv(funda_file)
-#        l_year     = existing[0][0]
-#        l_qtr      = int(existing[0][1])
-#        l_mth      = rev_qtr[l_qtr-1]
-#        l_date     = datetime.strptime(l_mth+' 30 '+l_year, '%b %d %Y')
-#        if ((now - l_date).days) > 105:
-#            tocsv      = [['YEAR','QTR','SALES','INCOME','OPP','PAT']]
-#            funda      = funda_leech(stock, mode='C', rep=cons[i])
-#            funda      = [x for x in funda if (x[0]>int(l_year)) or ((x[0] == int(l_year)) and (x[1] > l_qtr))]
-#            tocsv.extend(funda)
-#            tocsv.extend(existing)
-#            x4fns.write_csv(funda_file, tocsv, 'w')
 
 #    last_close  = close[-1]
 #    last_ratio  = df['RATIO'].iloc[-1]
