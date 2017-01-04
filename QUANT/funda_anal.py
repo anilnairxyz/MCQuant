@@ -39,6 +39,8 @@ def expand_funda(stock, column, window):
             if date > datetime.strptime(qtr_dates[int(row[1])-1]+row[0], '%d %b%Y'):
                 expanded.append([date, close[j], row[-1]])
                 break
+        else:
+            return []
     return expanded
 
 def evaluate_bands(stock, column, window):
