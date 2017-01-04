@@ -46,11 +46,11 @@ if __name__ == '__main__':
         if args.leech:
             # Leech technical information (price / volume)
             if 'H' in args.leech:
-                tech_leech('H', stock)
+                tech_leech(stock, 'H')
             if 'D' in args.leech:
-                tech_leech('D', stock)
+                tech_leech(stock, 'D')
             if 'W' in args.leech:
-                tech_leech('W', stock)
+                tech_leech(stock, 'W')
             # Leech fundamental information (sales, profit etc.)
             if 'F' in args.leech:
                 funda_leech(stock, 'C', 'F')

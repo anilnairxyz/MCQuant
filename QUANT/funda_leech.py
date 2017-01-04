@@ -85,7 +85,6 @@ def funda_leech(symbol, m='C', r='F'):
     start     = str(now.year)+now.strftime('%m')
     end       = str(now.year)+now.strftime('%m')
     maxy      = str(now.year)+now.strftime('%m')
-    print (symbol, mccode)
     cum_funda = []
 
     while True:
