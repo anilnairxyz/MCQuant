@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+from __future__ import division
 import requests
 import argparse
 import sys
@@ -11,82 +12,114 @@ from dateutil import parser
 from x4defs import *
 import x4fns
 
-qtr_dates = ['31 Mar', '30 Jun', '30 Sep', '31 Dec']
-HFUNDA    = ['DATE','QTR','SALES','INCOME','OPP','PAT']
-
-def annualize_funda(stock):
-    funda = x4fns.read_csv(FUNDADIR+stock+CSV)
+def annualize_funda(stock, column):
+    raw     = x4fns.read_csv(FUNDADIR+stock+CSV)
+    funda   = []
+    for row in raw:
+        if x4fns.is_number(row[PFUNDA[column]]):
+            funda.append([row[PFUNDA['YEAR']], row[PFUNDA['QTR']], row[PFUNDA[column]]])
+        else:        
+            break
     annualized = []
     for i, row in enumerate(funda[:-3]):
         ann_row = row[:2]
         ann_row.append(sum([float(funda[x][2]) for x in range(i, i+4)]))
-        ann_row.append(sum([float(funda[x][3]) for x in range(i, i+4)]))
-        ann_row.append(sum([float(funda[x][4]) for x in range(i, i+4)]))
-        ann_row.append(sum([float(funda[x][5]) for x in range(i, i+4)]))
         annualized.append(ann_row)
     return annualized
 
-def expand_funda(funda, stock, dates):
-    expanded = []
-    for date in dates:
-        exp_row = [date]
-        for i, row in enumerate(funda):
+def expand_funda(stock, column, window):
+    qtr_dates   = ['31 Mar', '30 Jun', '30 Sep', '31 Dec']
+    annualized  = annualize_funda(stock, column)
+    tech_data   = x4fns.readall_csv(HISTDIR+stock+CSV)[-window:]
+    dates       = [datetime.strptime(x[PHIST['DATE']], '%d %b %Y') for x in tech_data]
+    close       = [float(x[PHIST['CLOSE']]) for x in tech_data]
+    expanded    = []
+    for j, date in enumerate(dates):
+        for row in annualized:
             if date > datetime.strptime(qtr_dates[int(row[1])-1]+row[0], '%d %b%Y'):
-                for cell in row[1:]:
-                    exp_row.append(cell)
+                expanded.append([date, close[j], row[-1]])
                 break
-        expanded.append(exp_row)
     return expanded
+
+def bollinger_bands(stock, column, window):
+    expanded      = expand_funda(stock, column, window)
+    if len(expanded):
+        ratio     = [x[1]/x[2] for x in expanded]
+        mean      = x4fns.smean(ratio)
+        stdd      = x4fns.sstdd(ratio)
+        error     = int((ratio[-1] - mean)*100/stdd)
+    else:
+        error     = 'Null'
+    return error
+
+def range_bands(stock, column, window):
+    expanded      = expand_funda(stock, column, window)
+    if len(expanded):
+        ratio     = [x[1]/x[2] for x in expanded]
+        upper     = max(ratio)
+        lower     = min(ratio)
+        level     = int((ratio[-1] - lower)*100/(upper - lower))
+    else:
+        level     = 'Null'
+    return level
 
 if __name__ == '__main__':
     
-    parser = argparse.ArgumentParser("Fundamental Analysis")
+    parser      = argparse.ArgumentParser("Fundamental Analysis")
     parser.add_argument("stock", help="name of stock")
     parser.add_argument("window", help="duration in trading days", type=int)
     parser.add_argument("value", help="Value for testing - 'S':Sales, 'I':Income, 'O':Op profit, 'P':PAT")
-    args   = parser.parse_args()
-    tech_data   = x4fns.readall_csv(HISTDIR+args.stock+CSV)[-args.window:]
-    dates       = [datetime.strptime(x[PHIST['DATE']], '%d %b %Y') for x in tech_data]
-    close       = [float(x[PHIST['CLOSE']]) for x in tech_data]
-    annualized  = annualize_funda(args.stock)
-    expanded    = expand_funda(annualized, args.stock, dates)
-    df          = pd.DataFrame(expanded, columns=HFUNDA)
-    df['PRICE'] = close
-    title       = ['-']*4
+    args        = parser.parse_args()
     if 'S' in args.value:
+        expanded      = expand_funda(args.stock, 'SALES', args.window)
+        df            = pd.DataFrame(expanded, columns=['DATE', 'PRICE', 'SALES'])
         df['RATIO_S'] = df['PRICE'] / df['SALES']
+        df['MEAN_S']  = df['RATIO_S'].mean()
+        df['RATIO_S'] = df['RATIO_S'] / df['MEAN_S']
         df['MEAN_S']  = df['RATIO_S'].mean()
         df['UPPER_S'] = df['MEAN_S'] + df['RATIO_S'].std()
         df['LOWER_S'] = df['MEAN_S'] - df['RATIO_S'].std() 
-        A = {'X': 'DATE', 'Y': ['RATIO_S', 'MEAN_S', 'UPPER_S', 'LOWER_S'], 'Z': ['PRICE']}
-        title[0]      = args.stock+' Sales'
+        title         = args.stock+' Sales'
+        A = {'DF':df, 'title':title, 'X': 'DATE', 'Y': ['RATIO_S', 'MEAN_S', 'UPPER_S', 'LOWER_S'], 'Z': ['PRICE']}
     else:
         A = {}
     if 'I' in args.value:
+        expanded      = expand_funda(args.stock, 'INCOME', args.window)
+        df            = pd.DataFrame(expanded, columns=['DATE', 'PRICE', 'INCOME'])
         df['RATIO_I'] = df['PRICE'] / df['INCOME']
+        df['MEAN_I']  = df['RATIO_I'].mean()
+        df['RATIO_I'] = df['RATIO_I'] / df['MEAN_I']
         df['MEAN_I']  = df['RATIO_I'].mean()
         df['UPPER_I'] = df['MEAN_I'] + df['RATIO_I'].std()
         df['LOWER_I'] = df['MEAN_I'] - df['RATIO_I'].std() 
-        B = {'X': 'DATE', 'Y': ['RATIO_I', 'MEAN_I', 'UPPER_I', 'LOWER_I'], 'Z': ['PRICE']}
-        title[1]      = args.stock+' Income'
+        title         = args.stock+' Income'
+        B = {'DF':df, 'title':title, 'X': 'DATE', 'Y': ['RATIO_I', 'MEAN_I', 'UPPER_I', 'LOWER_I'], 'Z': ['PRICE']}
     else:
         B = {}
     if 'O' in args.value:
+        expanded      = expand_funda(args.stock, 'OPP', args.window)
+        df            = pd.DataFrame(expanded, columns=['DATE', 'PRICE', 'OPP'])
         df['RATIO_O'] = df['PRICE'] / df['OPP']
+        df['MEAN_O']  = df['RATIO_O'].mean()
+        df['RATIO_O'] = df['RATIO_O'] / df['MEAN_O']
         df['MEAN_O']  = df['RATIO_O'].mean()
         df['UPPER_O'] = df['MEAN_O'] + df['RATIO_O'].std()
         df['LOWER_O'] = df['MEAN_O'] - df['RATIO_O'].std() 
-        C = {'X': 'DATE', 'Y': ['RATIO_O', 'MEAN_O', 'UPPER_O', 'LOWER_O'], 'Z': ['PRICE']}
-        title[2]      = args.stock+' OpP'
+        title         = args.stock+' OpP'
+        C = {'DF':df, 'title':title, 'X': 'DATE', 'Y': ['RATIO_O', 'MEAN_O', 'UPPER_O', 'LOWER_O'], 'Z': ['PRICE']}
     else:
         C = {}
     if 'P' in args.value:
+        expanded      = expand_funda(args.stock, 'PAT', args.window)
+        df            = pd.DataFrame(expanded, columns=['DATE', 'PRICE', 'PAT'])
         df['RATIO_P'] = df['PRICE'] / df['PAT']
+        df['MEAN_P']  = df['RATIO_P'].mean()
+        df['RATIO_P'] = df['RATIO_P'] / df['MEAN_P']
         df['MEAN_P']  = df['RATIO_P'].mean()
         df['UPPER_P'] = df['MEAN_P'] + df['RATIO_P'].std()
         df['LOWER_P'] = df['MEAN_P'] - df['RATIO_P'].std() 
-        D = {'X': 'DATE', 'Y': ['RATIO_P', 'MEAN_P', 'UPPER_P', 'LOWER_P'], 'Z': ['PRICE']}
-        title[3]      = args.stock+' PAT'
+        title         = args.stock+' PAT'
+        D = {'DF':df, 'title':title, 'X': 'DATE', 'Y': ['RATIO_P', 'MEAN_P', 'UPPER_P', 'LOWER_P'], 'Z': ['PRICE']}
     else:
         D = {}
-    x4fns.multiplot_df(df, title, A=A, B=B, C=C, D=D)
+    x4fns.multiplot_df(A=A, B=B, C=C, D=D)

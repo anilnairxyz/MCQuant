@@ -5,6 +5,13 @@ import math
 import csv
 import matplotlib.pyplot as     plt
 
+def is_number(s):
+    try:
+        float(s)
+        return True
+    except ValueError:
+        return False
+
 ## ********************************************************************************************* ##
 ## CSV Related
 ## ********************************************************************************************* ##
@@ -119,35 +126,35 @@ def plot_df(df, title, x, y, z=[]):
 
 ## Multiple Plots
 ## ================================================ ##
-def multiplot_df(df, title, A={}, B={}, C={}, D={}):
+def multiplot_df(A={}, B={}, C={}, D={}):
     fig, axes = plt.subplots(nrows=2, ncols=2, figsize=(20,12))
     if A:
         cols        = A['Y']
         cols.append(A['X'])
         cols.extend(A['Z'])
-        adf         = df[cols]
+        adf         = A['DF'][cols]
         adf         = adf.set_index([A['X']])
-        adf.plot(title=title[0], secondary_y=A['Z'], linewidth=2, legend=None, ax=axes[0,0])
+        adf.plot(title=A['title'], secondary_y=A['Z'], linewidth=2, legend=None, ax=axes[0,0])
     if B:
         cols        = B['Y']
         cols.append(B['X'])
         cols.extend(B['Z'])
-        bdf         = df[cols]
+        bdf         = B['DF'][cols]
         bdf         = bdf.set_index([B['X']])
-        bdf.plot(title=title[1], secondary_y=B['Z'], linewidth=2, legend=None, ax=axes[0,1])
+        bdf.plot(title=B['title'], secondary_y=B['Z'], linewidth=2, legend=None, ax=axes[0,1])
     if C:
         cols        = C['Y']
         cols.append(C['X'])
         cols.extend(C['Z'])
-        cdf         = df[cols]
+        cdf         = C['DF'][cols]
         cdf         = cdf.set_index([C['X']])
-        cdf.plot(title=title[2], secondary_y=C['Z'], linewidth=2, legend=None, ax=axes[1,0])
+        cdf.plot(title=C['title'], secondary_y=C['Z'], linewidth=2, legend=None, ax=axes[1,0])
     if D:
         cols        = D['Y']
         cols.append(D['X'])
         cols.extend(D['Z'])
-        ddf         = df[cols]
+        ddf         = D['DF'][cols]
         ddf         = ddf.set_index([D['X']])
-        ddf.plot(title=title[3], secondary_y=D['Z'], linewidth=2, legend=None, ax=axes[1,1])
+        ddf.plot(title=D['title'], secondary_y=D['Z'], linewidth=2, legend=None, ax=axes[1,1])
     plt.grid(True)
     plt.show()
