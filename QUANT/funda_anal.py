@@ -41,27 +41,25 @@ def expand_funda(stock, column, window):
                 break
     return expanded
 
-def bollinger_bands(stock, column, window):
-    expanded      = expand_funda(stock, column, window)
+def evaluate_bands(stock, column, window):
+    expanded       = expand_funda(stock, column, window)
     if len(expanded):
-        ratio     = [x[1]/x[2] for x in expanded]
-        mean      = x4fns.smean(ratio)
-        stdd      = x4fns.sstdd(ratio)
-        error     = int((ratio[-1] - mean)*100/stdd)
+        ratio      = [x[1]/x[2] for x in expanded]
+        mean       = x4fns.smean(ratio)
+        stdd       = x4fns.sstdd(ratio)
+        bollinger  = int((ratio[-1] - mean)*100/stdd)
+        upper      = max(ratio)
+        lower      = min(ratio)
+        rangeband  = int((ratio[-1] - lower)*100/(upper - lower))
+        start_date = expanded[0][0]
+        data       = [[(x[0]-start_date).days, x[1]/x[2]] for x in expanded]
+        slope, _   = x4fns.regress(data)
+        slope      = int(slope*10000)
     else:
-        error     = 'Null'
-    return error
-
-def range_bands(stock, column, window):
-    expanded      = expand_funda(stock, column, window)
-    if len(expanded):
-        ratio     = [x[1]/x[2] for x in expanded]
-        upper     = max(ratio)
-        lower     = min(ratio)
-        level     = int((ratio[-1] - lower)*100/(upper - lower))
-    else:
-        level     = 'Null'
-    return level
+        bollinger  = 'Null'
+        rangeband  = 'Null'
+        slope      = 'Null'
+    return bollinger, rangeband, slope
 
 if __name__ == '__main__':
     
