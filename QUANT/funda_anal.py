@@ -47,30 +47,41 @@ def evaluate_bands(stock, column, window):
     expanded       = expand_funda(stock, column, window)
     if len(expanded):
         ratio      = [x[1]/x[2] for x in expanded]
-        mean       = x4fns.smean(ratio)
+        rmean      = x4fns.smean(ratio)
+        ratio      = [x/rmean for x in ratio]
+        lratio     = ratio[-1]
+        mean       = rmean/lratio
         stdd       = x4fns.sstdd(ratio)
-        bollinger  = int((ratio[-1] - mean)*100/stdd)
-        upper      = max(ratio)
-        lower      = min(ratio)
-        rangeband  = int((ratio[-1] - lower)*100/(upper - lower))
+        ltp        = expanded[-1][1]
+        upper      = max(ratio)/lratio
+        lower      = min(ratio)/lratio
         start_date = expanded[0][0]
-        data       = [[(x[0]-start_date).days, x[1]/x[2]] for x in expanded]
+        data       = [[(expanded[i][0]-start_date).days, ratio[i]] for i in range(len(expanded))]
         slope, _   = x4fns.regress(data)
         slope      = int(slope*10000)
     else:
-        bollinger  = 'Null'
-        rangeband  = 'Null'
-        slope      = 'Null'
+        stdd       = None
+        ltp        = None
+        upper      = None
+        lower      = None
+        slope      = None
     return bollinger, rangeband, slope
+
+def calculate_thresholds(stock):
+    b, r, s     = evaluate_bands(stock, 'INCOME', 252)
+    if b:
+
+    if abs(s) < 5:
 
 if __name__ == '__main__':
     
     parser      = argparse.ArgumentParser("Fundamental Analysis")
     parser.add_argument("stock", help="name of stock")
     parser.add_argument("window", help="duration in trading days", type=int)
-    parser.add_argument("value", help="Value for testing - 'S':Sales, 'I':Income, 'O':Op profit, 'P':PAT")
     args        = parser.parse_args()
-    if 'S' in args.value:
+    plot_value  = 'SIOP'
+    quiet       = True
+    if 'S' in plot_value:
         expanded      = expand_funda(args.stock, 'SALES', args.window)
         df            = pd.DataFrame(expanded, columns=['DATE', 'PRICE', 'SALES'])
         df['RATIO_S'] = df['PRICE'] / df['SALES']
@@ -79,11 +90,11 @@ if __name__ == '__main__':
         df['MEAN_S']  = df['RATIO_S'].mean()
         df['UPPER_S'] = df['MEAN_S'] + df['RATIO_S'].std()
         df['LOWER_S'] = df['MEAN_S'] - df['RATIO_S'].std() 
-        title         = args.stock+' Sales'
+        title         = 'S' if quiet else args.stock+' Sales'
         A = {'DF':df, 'title':title, 'X': 'DATE', 'Y': ['RATIO_S', 'MEAN_S', 'UPPER_S', 'LOWER_S'], 'Z': ['PRICE']}
     else:
         A = {}
-    if 'I' in args.value:
+    if 'I' in plot_value:
         expanded      = expand_funda(args.stock, 'INCOME', args.window)
         df            = pd.DataFrame(expanded, columns=['DATE', 'PRICE', 'INCOME'])
         df['RATIO_I'] = df['PRICE'] / df['INCOME']
@@ -92,11 +103,11 @@ if __name__ == '__main__':
         df['MEAN_I']  = df['RATIO_I'].mean()
         df['UPPER_I'] = df['MEAN_I'] + df['RATIO_I'].std()
         df['LOWER_I'] = df['MEAN_I'] - df['RATIO_I'].std() 
-        title         = args.stock+' Income'
+        title         = 'I' if quiet else args.stock+' Income'
         B = {'DF':df, 'title':title, 'X': 'DATE', 'Y': ['RATIO_I', 'MEAN_I', 'UPPER_I', 'LOWER_I'], 'Z': ['PRICE']}
     else:
         B = {}
-    if 'O' in args.value:
+    if 'O' in plot_value:
         expanded      = expand_funda(args.stock, 'OPP', args.window)
         df            = pd.DataFrame(expanded, columns=['DATE', 'PRICE', 'OPP'])
         df['RATIO_O'] = df['PRICE'] / df['OPP']
@@ -105,11 +116,11 @@ if __name__ == '__main__':
         df['MEAN_O']  = df['RATIO_O'].mean()
         df['UPPER_O'] = df['MEAN_O'] + df['RATIO_O'].std()
         df['LOWER_O'] = df['MEAN_O'] - df['RATIO_O'].std() 
-        title         = args.stock+' OpP'
+        title         = 'O' if quiet else args.stock+' OpP'
         C = {'DF':df, 'title':title, 'X': 'DATE', 'Y': ['RATIO_O', 'MEAN_O', 'UPPER_O', 'LOWER_O'], 'Z': ['PRICE']}
     else:
         C = {}
-    if 'P' in args.value:
+    if 'P' in plot_value:
         expanded      = expand_funda(args.stock, 'PAT', args.window)
         df            = pd.DataFrame(expanded, columns=['DATE', 'PRICE', 'PAT'])
         df['RATIO_P'] = df['PRICE'] / df['PAT']
@@ -118,7 +129,7 @@ if __name__ == '__main__':
         df['MEAN_P']  = df['RATIO_P'].mean()
         df['UPPER_P'] = df['MEAN_P'] + df['RATIO_P'].std()
         df['LOWER_P'] = df['MEAN_P'] - df['RATIO_P'].std() 
-        title         = args.stock+' PAT'
+        title         = 'P' if quiet else args.stock+' Profit'
         D = {'DF':df, 'title':title, 'X': 'DATE', 'Y': ['RATIO_P', 'MEAN_P', 'UPPER_P', 'LOWER_P'], 'Z': ['PRICE']}
     else:
         D = {}

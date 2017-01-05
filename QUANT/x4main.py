@@ -13,45 +13,48 @@ import x4fns
 from tech_leech import *
 from funda_leech import *
 from funda_anal import *
+from x4gsheet import *
 
 # Parameters 
 
 if __name__ == '__main__':
 
     parser = argparse.ArgumentParser("Batch Job to run all")
-    parser.add_argument("-s", "--stock", help="name of stock")
+    parser.add_argument("-u", "--catalog", help="Update Catalog")
     parser.add_argument("-l", "--leech", help="Leech H: Historic, F:Fundamental")
     parser.add_argument("-f", "--funda", help="Analyse Fundamentals - S:Sales, I:Income, O:Op profit, P:PAT")
-#    parser.add_argument("window", help="duration in trading days", type=int)
     args   = parser.parse_args()
-    if args.stock:
-        stocks = [args.stock]
-    else:
-        # Read the source file which contains all the details on the stocks
-        catalog = x4fns.read_csv(EQCatalog)
-        stocks  = [x[PCAT['NSECODE']] for x in catalog]
+
+    # Update the catalog
+    if args.catalog:
+        refresh_catalog()
+
+    # Get the list of stocks
+    catalog = x4fns.read_csv(EQCatalog)
+    stocks  = [x[PCAT['NSECODE']] for x in catalog]
         
+    # Fundamental Analysis
     if args.funda:
         header  = ['STOCK']
         if 'S' in args.funda:
-            header.extend(['6M_SAL_BollB', '1Y_SAL_BollB', '2Y_SAL_BollB', '4Y_SAL_BollB',
-                          '6M_SAL_Range', '1Y_SAL_Range', '2Y_SAL_Range', '4Y_SAL_Range',
-                          '6M_SAL_Slope', '1Y_SAL_Slope', '2Y_SAL_Slope', '4Y_SAL_Slope'
+            header.extend(['6M_S_Boll', '1Y_S_Boll', '2Y_S_Boll', '4Y_S_Boll',
+                           '6M_S_Rang', '1Y_S_Rang', '2Y_S_Rang', '4Y_S_Rang',
+                           '6M_S_Slop', '1Y_S_Slop', '2Y_S_Slop', '4Y_S_Slop'
                           ])
         if 'I' in args.funda:
-            header.extend(['6M_INC_BollB', '1Y_INC_BollB', '2Y_INC_BollB', '4Y_INC_BollB',
-                          '6M_INC_Range', '1Y_INC_Range', '2Y_INC_Range', '4Y_INC_Range',
-                          '6M_INC_Slope', '1Y_INC_Slope', '2Y_INC_Slope', '4Y_INC_Slope'
+            header.extend(['6M_I_Boll', '1Y_I_Boll', '2Y_I_Boll', '4Y_I_Boll',
+                           '6M_I_Rang', '1Y_I_Rang', '2Y_I_Rang', '4Y_I_Rang',
+                           '6M_I_Slop', '1Y_I_Slop', '2Y_I_Slop', '4Y_I_Slop'
                           ])
         if 'O' in args.funda:
-            header.extend(['6M_OPP_BollB', '1Y_OPP_BollB', '2Y_OPP_BollB', '4Y_OPP_BollB',
-                          '6M_OPP_Range', '1Y_OPP_Range', '2Y_OPP_Range', '4Y_OPP_Range',
-                          '6M_OPP_Slope', '1Y_OPP_Slope', '2Y_OPP_Slope', '4Y_OPP_Slope'
+            header.extend(['6M_O_Boll', '1Y_O_Boll', '2Y_O_Boll', '4Y_O_Boll',
+                           '6M_O_Rang', '1Y_O_Rang', '2Y_O_Rang', '4Y_O_Rang',
+                           '6M_O_Slop', '1Y_O_Slop', '2Y_O_Slop', '4Y_O_Slop'
                           ])
         if 'P' in args.funda:
-            header.extend(['6M_PAT_BollB', '1Y_PAT_BollB', '2Y_PAT_BollB', '4Y_PAT_BollB',
-                          '6M_PAT_Range', '1Y_PAT_Range', '2Y_PAT_Range', '4Y_PAT_Range',
-                          '6M_PAT_Slope', '1Y_PAT_Slope', '2Y_PAT_Slope', '4Y_PAT_Slope'
+            header.extend(['6M_P_Boll', '1Y_P_Boll', '2Y_P_Boll', '4Y_P_Boll',
+                           '6M_P_Rang', '1Y_P_Rang', '2Y_P_Rang', '4Y_P_Rang',
+                           '6M_P_Slop', '1Y_P_Slop', '2Y_P_Slop', '4Y_P_Slop'
                           ])
         funda   = [header]
 
@@ -96,8 +99,7 @@ if __name__ == '__main__':
                 p_bb_2y, p_rb_2y, p_sl_2y = evaluate_bands(stock, 'PAT', 504)
                 p_bb_4y, p_rb_4y, p_sl_4y = evaluate_bands(stock, 'PAT', 1008)
                 row.extend([p_bb_6m,p_bb_1y,p_bb_2y,p_bb_4y,p_rb_6m,p_rb_1y,p_rb_2y,p_rb_4y,p_sl_6m,p_sl_1y,p_sl_2y,p_sl_4y])
-
-        funda.append(row)
+            funda.append(row)
 
     if args.funda:
         x4fns.write_csv(DBDIR+'Fundamental_Analysis'+CSV, funda, 'w')
