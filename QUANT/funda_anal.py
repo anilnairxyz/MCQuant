@@ -50,28 +50,22 @@ def evaluate_bands(stock, column, window):
         rmean      = x4fns.smean(ratio)
         ratio      = [x/rmean for x in ratio]
         lratio     = ratio[-1]
-        mean       = rmean/lratio
-        stdd       = x4fns.sstdd(ratio)
         ltp        = expanded[-1][1]
-        upper      = max(ratio)/lratio
-        lower      = min(ratio)/lratio
+        mean       = (1/lratio)*ltp
+        stdd       = (x4fns.sstdd(ratio))*ltp
+        upper      = (max(ratio)/lratio)*ltp
+        lower      = (min(ratio)/lratio)*ltp
         start_date = expanded[0][0]
         data       = [[(expanded[i][0]-start_date).days, ratio[i]] for i in range(len(expanded))]
         slope, _   = x4fns.regress(data)
         slope      = int(slope*10000)
     else:
+        mean       = None
         stdd       = None
-        ltp        = None
-        upper      = None
-        lower      = None
+        upper      = 0
+        lower      = 0
         slope      = None
-    return bollinger, rangeband, slope
-
-def calculate_thresholds(stock):
-    b, r, s     = evaluate_bands(stock, 'INCOME', 252)
-    if b:
-
-    if abs(s) < 5:
+    return ltp, mean, upper, lower, slope
 
 if __name__ == '__main__':
     
