@@ -65,7 +65,7 @@ def evaluate_bands(stock, column, window):
         upper      = 0
         lower      = 0
         slope      = None
-    return ltp, mean, upper, lower, slope
+    return upper, lower
 
 if __name__ == '__main__':
     
@@ -74,7 +74,7 @@ if __name__ == '__main__':
     parser.add_argument("window", help="duration in trading days", type=int)
     args        = parser.parse_args()
     plot_value  = 'SIOP'
-    quiet       = True
+    quiet       = False
     if 'S' in plot_value:
         expanded      = expand_funda(args.stock, 'SALES', args.window)
         df            = pd.DataFrame(expanded, columns=['DATE', 'PRICE', 'SALES'])

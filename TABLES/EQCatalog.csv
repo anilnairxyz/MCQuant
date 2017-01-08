@@ -20,7 +20,7 @@ RATING,NSECODE,MCCODE,FCODE,CONS,ISIN,NAME,LISTING_DATE,SECTOR,INDUSTRY,RATIOS
 0,GSKCONS,sb,gsc04,S,INE264A01014,GlaxoSmithKline Consumer Healthcare Limited,6/16/2003,Consumer Nondurables,Branded Foods,SO
 0,COLPAL,cpi,cpi,S,INE259A01022,Colgate Palmolive (India) Limited,12/17/2007,Consumer Nondurables,Branded Personal Care,SO
 0,3MINDIA,b3m,mi42,S,INE470A01017,3M India Limited,8/13/2004,Chemicals,Branded Chemicals,SO
-0,GILLETTE,isp,gi22,S,INE322A01010,Gillette India Limited,7/30/2003,Consumer Nondurables,Branded Personal Care,SO
+0,GILLETTE,isp,gi22,S,INE322A01010,Gillette India Limited,7/30/2003,Consumer Nondurables,Branded Personal Care,S
 1,MCDOWELL-N,mc08,us,S,INE854D01016,United Spirits Limited,9/27/2001,Consumer Nondurables,Branded Alcoholic Beverages,S
 1,BATAINDIA,bi01,bi01,S,INE176A01028,Bata India Limited,6/18/2003,Consumer Nondurables,Branded Footwear,SO
 1,GODREJIND,gs,gi23,C,INE233A01035,Godrej Industries Limited,2/25/2003,Consumer Nondurables,Branded Personal Care,SO

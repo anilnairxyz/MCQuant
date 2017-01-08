@@ -63,12 +63,12 @@ if __name__ == '__main__':
             tech_data   = x4fns.readall_csv(HISTDIR+stock['symbol']+CSV)[-1]
             ltp         = '{0:.2f}'.format(float(tech_data[PHIST['CLOSE']]))
             row         = [stock['symbol']]
-            if 'S' in args.funda:
+            if 'S' in stock['ratios']:
                 s_ru_1y, s_rl_1y = evaluate_bands(stock['symbol'], 'SALES', 252)
                 s_ru_2y, s_rl_2y = evaluate_bands(stock['symbol'], 'SALES', 504)
                 trow = [s_ru_1y, s_rl_1y, s_ru_2y, s_rl_2y]
                 row.extend([int(x) if isinstance(x, float) else x for x in trow])
-            elif 'I' in args.funda:
+            elif 'I' in stock['ratios']:
                 i_ru_1y, i_rl_1y = evaluate_bands(stock['symbol'], 'INCOME', 252)
                 i_ru_2y, i_rl_2y = evaluate_bands(stock['symbol'], 'INCOME', 504)
                 trow = [i_ru_1y, i_rl_1y, i_ru_2y, i_rl_2y]
@@ -76,12 +76,12 @@ if __name__ == '__main__':
             else:
                 row.extend([0, 0, 0, 0])
 
-            if 'O' in args.funda:
+            if 'O' in stock['ratios']:
                 o_ru_1y, o_rl_1y = evaluate_bands(stock['symbol'], 'OPP', 252)
                 o_ru_2y, o_rl_2y = evaluate_bands(stock['symbol'], 'OPP', 504)
                 trow = [o_ru_1y, o_rl_1y, o_ru_2y, o_rl_2y]
                 row.extend([int(x) if isinstance(x, float) else x for x in trow])
-            elif 'P' in args.funda:
+            elif 'P' in stock['ratios']:
                 p_ru_1y, p_rl_1y = evaluate_bands(stock['symbol'], 'PAT', 252)
                 p_ru_2y, p_rl_2y = evaluate_bands(stock['symbol'], 'PAT', 504)
                 trow = [p_ru_1y, p_rl_1y, p_ru_2y, p_rl_2y]
