@@ -35,6 +35,20 @@ if __name__ == '__main__':
         
     # Fundamental Analysis
     if args.funda:
+        if 'F' in args.funda:
+            f_anal = True
+        else:
+            f_anal = False
+
+        if 'C' in args.funda:
+            cf_anal = True
+        else:
+            cf_anal = False
+    else:
+        f_anal = False
+        cf_anal = False
+
+    if f_anal:
         header  = ['STOCK']
         header.extend(['1Y_S_U', '1Y_S_L',
                        '2Y_S_U', '2Y_S_L'
@@ -44,22 +58,28 @@ if __name__ == '__main__':
                       ])
         funda   = [header]
 
-    for stock in stocks:
 
-        print ("Processing for stock: "+stock['symbol'])
-        if args.leech:
-            # Leech technical information (price / volume)
+    if args.leech:
+        # Leech technical information (price / volume)
+        for symbol in [stock['symbol'] for stock in stocks]+['NIFTY']:
             if 'H' in args.leech:
-                tech_leech(stock['symbol'], 'H')
+                print ("Leeching technical for stock: "+symbol)
+                tech_leech(symbol, 'H')
             if 'D' in args.leech:
-                tech_leech(stock['symbol'], 'D')
+                print ("Leeching technical for stock: "+symbol)
+                tech_leech(symbol, 'D')
             if 'W' in args.leech:
-                tech_leech(stock['symbol'], 'W')
-            # Leech fundamental information (sales, profit etc.)
+                print ("Leeching technical for stock: "+symbol)
+                tech_leech(symbol, 'W')
+        # Leech fundamental information (sales, profit etc.)
+        for stock in stocks:
             if 'F' in args.leech:
+                print ("Leeching fundamental for stock: "+stock['symbol'])
                 funda_leech(stock['symbol'], 'C', 'F')
 
-        if args.funda:
+    if f_anal:
+        for stock in stocks:
+            print ("Fundamental Analysis for stock: "+stock['symbol'])
             tech_data   = x4fns.readall_csv(HISTDIR+stock['symbol']+CSV)[-1]
             ltp         = '{0:.2f}'.format(float(tech_data[PHIST['CLOSE']]))
             row         = [stock['symbol']]
@@ -90,6 +110,30 @@ if __name__ == '__main__':
                 row.extend([0, 0, 0, 0])
             funda.append(row)
 
-    if args.funda:
+    if f_anal:
         x4fns.write_csv(DBDIR+'Fundamental_Analysis'+CSV, funda, 'w')
         update_ranges(funda)
+
+    if cf_anal:
+        tech_data   = x4fns.readall_csv(HISTDIR+'NIFTY'+CSV)[-1]
+        ltp         = float(tech_data[PHIST['CLOSE']])
+        u, l, m, s  = evaluate_bands('NIFTY', 'SALES', 1008)
+        level_4y_s  = int(x4fns.cumnormdist((ltp - m)/s)*100)
+        range_4y_s  = int((ltp - l)*100/(u - l))
+        u, l, m, s  = evaluate_bands('NIFTY', 'SALES', 504)
+        level_2y_s  = int(x4fns.cumnormdist((ltp - m)/s)*100)
+        range_2y_s  = int((ltp - l)*100/(u - l))
+        u, l, m, s  = evaluate_bands('NIFTY', 'SALES', 252)
+        level_1y_s  = int(x4fns.cumnormdist((ltp - m)/s)*100)
+        range_1y_s  = int((ltp - l)*100/(u - l))
+        u, l, m, s  = evaluate_bands('NIFTY', 'PAT', 1008)
+        level_4y_p  = int(x4fns.cumnormdist((ltp - m)/s)*100)
+        range_4y_p  = int((ltp - l)*100/(u - l))
+        u, l, m, s  = evaluate_bands('NIFTY', 'PAT', 504)
+        level_2y_p  = int(x4fns.cumnormdist((ltp - m)/s)*100)
+        range_2y_p  = int((ltp - l)*100/(u - l))
+        u, l, m, s  = evaluate_bands('NIFTY', 'PAT', 252)
+        level_1y_p  = int(x4fns.cumnormdist((ltp - m)/s)*100)
+        range_1y_p  = int((ltp - l)*100/(u - l))
+        print (level_4y_s, range_4y_s, level_2y_s, range_2y_s, level_1y_s, range_1y_s)
+        print (level_4y_p, range_4y_p, level_2y_p, range_2y_p, level_1y_p, range_1y_p)

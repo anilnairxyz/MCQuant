@@ -28,22 +28,55 @@ def annualize_funda(stock, column):
     return annualized
 
 def expand_funda(stock, column, window):
-    qtr_dates   = ['31 Mar', '30 Jun', '30 Sep', '31 Dec']
-    annualized  = annualize_funda(stock, column)
-    tech_data   = x4fns.readall_csv(HISTDIR+stock+CSV)[-window:]
-    dates       = [datetime.strptime(x[PHIST['DATE']], '%d %b %Y') for x in tech_data]
-    close       = [float(x[PHIST['CLOSE']]) for x in tech_data]
-    expanded    = []
-    for j, date in enumerate(dates):
-        for row in annualized:
-            if date > datetime.strptime(qtr_dates[int(row[1])-1]+row[0], '%d %b%Y'):
-                expanded.append([date, close[j], row[-1]])
-                break
-        else:
-            return []
+    if stock == 'NIFTY':
+        expanded = cum_funda(column, window)
+    else:
+        qtr_dates   = ['31 Mar', '30 Jun', '30 Sep', '31 Dec']
+        annualized  = annualize_funda(stock, column)
+        tech_data   = x4fns.readall_csv(HISTDIR+stock+CSV)[-window:]
+        dates       = [datetime.strptime(x[PHIST['DATE']], '%d %b %Y') for x in tech_data]
+        close       = [float(x[PHIST['CLOSE']]) for x in tech_data]
+        expanded    = []
+        for j, date in enumerate(dates):
+            for row in annualized:
+                if date > datetime.strptime(qtr_dates[int(row[1])-1]+row[0], '%d %b%Y'):
+                    expanded.append([date, close[j], row[-1]])
+                    break
+            else:
+                return []
     return expanded
 
-def evaluate_bands(stock, column, window):
+def cum_funda(column, window):
+    # Get the list of stocks
+    tech_data   = x4fns.readall_csv(HISTDIR+'NIFTY'+CSV)[-window:]
+    dates       = [datetime.strptime(x[PHIST['DATE']], '%d %b %Y') for x in tech_data]
+    close       = [float(x[PHIST['CLOSE']]) for x in tech_data]
+    c_expanded  = [0] * window
+    catalog     = x4fns.read_csv(EQCatalog)
+    stocks      = [{'symbol':x[PCAT['NSECODE']], 'ratios':x[PCAT['RATIOS']]} for x in catalog]
+    for stock in stocks:
+        if column == 'SALES':
+            if 'S' in stock['ratios']:
+                expanded = expand_funda(stock['symbol'], 'SALES', window)
+            elif 'I' in stock['ratios']:
+                expanded = expand_funda(stock['symbol'], 'INCOME', window)
+            else:
+                expanded = []
+        elif column == 'PAT':
+            if 'O' in stock['ratios']:
+                expanded = expand_funda(stock['symbol'], 'OPP', window)
+            elif 'P' in stock['ratios']:
+                expanded = expand_funda(stock['symbol'], 'PAT', window)
+            else:
+                expanded = []
+        else:
+            expanded = []
+        if len(expanded) == window:
+            c_expanded = [expanded[i][2]+c_expanded[i] for i in range(window)]
+    nifty       = list(zip(dates, close, c_expanded))
+    return nifty
+
+def evaluate_bands(stock, column, window, stat=False):
     expanded       = expand_funda(stock, column, window)
     if len(expanded):
         ratio      = [x[1]/x[2] for x in expanded]
@@ -65,7 +98,10 @@ def evaluate_bands(stock, column, window):
         upper      = 0
         lower      = 0
         slope      = None
-    return upper, lower
+    if stat:
+        return upper, lower
+    else:
+        return upper, lower, mean, stdd
 
 if __name__ == '__main__':
     
@@ -73,7 +109,10 @@ if __name__ == '__main__':
     parser.add_argument("stock", help="name of stock")
     parser.add_argument("window", help="duration in trading days", type=int)
     args        = parser.parse_args()
-    plot_value  = 'SIOP'
+    if args.stock == 'NIFTY':
+        plot_value  = 'SP'
+    else:
+        plot_value  = 'SIOP'
     quiet       = False
     if 'S' in plot_value:
         expanded      = expand_funda(args.stock, 'SALES', args.window)
