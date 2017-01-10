@@ -46,7 +46,6 @@ def expand_funda(stock, column, window):
     return expanded
 
 def cum_funda(column, window):
-    # Get the list of stocks
     tech_data   = x4fns.readall_csv(HISTDIR+'NIFTY'+CSV)[-window:]
     dates       = [datetime.strptime(x[PHIST['DATE']], '%d %b %Y') for x in tech_data]
     close       = [float(x[PHIST['CLOSE']]) for x in tech_data]
@@ -98,9 +97,9 @@ def evaluate_bands(stock, column, window, stat=False):
         lower      = 0
         slope      = None
     if stat:
-        return upper, lower
-    else:
         return upper, lower, mean, stdd
+    else:
+        return upper, lower
 
 if __name__ == '__main__':
     
