@@ -2,7 +2,6 @@
 from __future__ import division
 import requests
 import argparse
-import sys
 import csv 
 import math
 import pandas as pd
