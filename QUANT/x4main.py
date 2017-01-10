@@ -135,5 +135,7 @@ if __name__ == '__main__':
         u, l, m, s  = evaluate_bands('NIFTY', 'PAT', 252)
         level_1y_p  = int(x4fns.cumnormdist((ltp - m)/s)*100)
         range_1y_p  = int((ltp - l)*100/(u - l))
-        print (level_4y_s, range_4y_s, level_2y_s, range_2y_s, level_1y_s, range_1y_s)
-        print (level_4y_p, range_4y_p, level_2y_p, range_2y_p, level_1y_p, range_1y_p)
+        nifty       = [['','4Y_NORM','4Y_RANGE','2Y_NORM','2Y_RANGE','1Y_NORM', '1Y_RANGE']]
+        nifty.append(['SALES',level_4y_s,range_4y_s,level_2y_s,range_2y_s,level_1y_s,range_1y_s])
+        nifty.append(['PROFIT',level_4y_p,range_4y_p,level_2y_p,range_2y_p,level_1y_p,range_1y_p])
+        update_nifty(nifty)

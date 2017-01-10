@@ -32,6 +32,23 @@ def update_ranges(thresholds):
         cell.value = thresholds_unfurl[i]
     wks.update_cells(cell_list)
 
+def update_nifty(table):
+    table_unfurl = [x for f in table for x in f]
+    width  = len(table[0])
+    length = len(table)
+    start_row = 1
+    start_col = 'A'
+    start_cell = start_col + str(start_row)
+    end_row = start_row + length - 1
+    end_col = chr(ord(start_col) + width - 1)
+    end_cell = end_col + str(end_row)
+    cell_range = start_cell+':'+end_cell
+    wks = open_worksheet('MktDashboard', 'Nifty')
+    cell_list = wks.range(cell_range) 
+    for i, cell in enumerate(cell_list):
+        cell.value = table_unfurl[i]
+    wks.update_cells(cell_list)
+
 if __name__ == '__main__':
     x = [list(range(10)) for x in range(5)]
     print (x)
