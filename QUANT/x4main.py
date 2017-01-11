@@ -22,7 +22,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser("Batch Job to run all")
     parser.add_argument("-u", "--catalog", help="Update - C:Catalog")
     parser.add_argument("-l", "--leech", help="Leech H: Historic, F:Fundamental")
-    parser.add_argument("-f", "--funda", help="Analyse - F:Fundamentals")
+    parser.add_argument("-a", "--analyse", help="Analyse - F:Fundamentals, C:Nifty")
     args   = parser.parse_args()
 
     # Update the catalog
@@ -34,13 +34,13 @@ if __name__ == '__main__':
     stocks      = [{'symbol':x[PCAT['NSECODE']], 'ratios':x[PCAT['RATIOS']]} for x in catalog]
         
     # Fundamental Analysis
-    if args.funda:
-        if 'F' in args.funda:
+    if args.analyse:
+        if 'F' in args.analyse:
             f_anal = True
         else:
             f_anal = False
 
-        if 'C' in args.funda:
+        if 'C' in args.analyse:
             cf_anal = True
         else:
             cf_anal = False

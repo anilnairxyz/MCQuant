@@ -1,6 +1,7 @@
 import gspread
 import x4fns
 from x4defs import *
+from datetime import datetime
 from oauth2client.service_account import ServiceAccountCredentials
 
 def open_worksheet(filename, sheet):
@@ -31,6 +32,18 @@ def update_ranges(thresholds):
     for i, cell in enumerate(cell_list):
         cell.value = thresholds_unfurl[i]
     wks.update_cells(cell_list)
+    update_date(wks, 'A1')
+
+def update_date(wks, cell):
+    today = datetime.today().strftime('%m/%d/%Y')
+    wks.update_acell(cell, today)
+
+def update_funda(stock, quarter):
+    wks = open_worksheet('MktDashboard', 'FAnalysis')
+    cell = wks.find(stock)
+    row = cell.row
+    col = cell.col + 9
+    wks.update_cell(row, col, quarter)
 
 def update_nifty(table):
     table_unfurl = [x for f in table for x in f]
@@ -48,9 +61,7 @@ def update_nifty(table):
     for i, cell in enumerate(cell_list):
         cell.value = table_unfurl[i]
     wks.update_cells(cell_list)
+    update_date(wks, 'A1')
 
 if __name__ == '__main__':
-    x = [list(range(10)) for x in range(5)]
-    print (x)
-    update_ranges(x)
-
+    update_funda('HDFC', 'Q4 2016')

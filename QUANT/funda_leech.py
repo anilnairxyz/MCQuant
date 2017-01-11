@@ -10,6 +10,7 @@ from datetime import datetime, timedelta, date
 from dateutil import parser
 from x4defs import *
 import x4fns
+import x4gsheet
 
 
 def get_values(cells, pattern, cols):
@@ -91,30 +92,28 @@ def funda_leech(symbol, m='C', r='F'):
         params = {'nav':nav,'type':report,'sc_did':mccode,'start_year':start,'end_year':end,'max_year':maxy}
         
         # fetch the data
-        if True:
-            response = requests.post(FUNDAURL, data=params)
-            html     = response.content
-            fundas   = parse_quarterly(html)
-            if (not len(fundas)) and (try_qty):
-                report       = 'quarterly'
-                try_qty      = False
-            elif len(fundas):
-                cum_funda.extend(fundas)
-                if (mode == 'C'):
-                    break
-                else:
-                    lastyear = fundas[-1][0]
-                    lastqtr  = fundas[-1][1]
-                    nav      = 'next'
-                    end      = str(lastyear)+'{0:0=2d}'.format(lastqtr*3)
-                try_qty      = False
-            else:
+        response = requests.post(FUNDAURL, data=params)
+        html     = response.content
+        fundas   = parse_quarterly(html)
+        if (not len(fundas)) and (try_qty):
+            report       = 'quarterly'
+            try_qty      = False
+        elif len(fundas):
+            cum_funda.extend(fundas)
+            if (mode == 'C'):
                 break
+            else:
+                lastyear = fundas[-1][0]
+                lastqtr  = fundas[-1][1]
+                nav      = 'next'
+                end      = str(lastyear)+'{0:0=2d}'.format(lastqtr*3)
+            try_qty      = False
         else:
             break
 
     funda_file = FUNDADIR+symbol+CSV
     tocsv      = [['YEAR','QTR','SALES','INCOME','OPP','PAT']]
+    latest_q   = str(cum_funda[0][0])+' '+'Q'+str(cum_funda[0][1])
     if mode == 'A':
         tocsv.extend(cum_funda)
         x4fns.write_csv(funda_file, tocsv, 'w')
@@ -126,6 +125,8 @@ def funda_leech(symbol, m='C', r='F'):
         l_date     = datetime.strptime(l_mth+' 30 '+l_year, '%b %d %Y')
         if ((now - l_date).days) > 105:
             cum_funda    = [x for x in cum_funda if (x[0]>int(l_year)) or ((x[0] == int(l_year)) and (x[1] > l_qtr))]
+            if len(cum_funda):
+                x4gsheet.update_funda(symbol, latest_q)
             tocsv.extend(cum_funda)
             tocsv.extend(existing)
             x4fns.write_csv(funda_file, tocsv, 'w')
