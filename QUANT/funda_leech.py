@@ -123,7 +123,7 @@ def funda_leech(symbol, m='C', r='F'):
         l_qtr      = int(existing[0][1])
         l_mth      = rev_qtr[l_qtr-1]
         l_date     = datetime.strptime(l_mth+' 30 '+l_year, '%b %d %Y')
-        if ((now - l_date).days) > 105:
+        if ((now - l_date).days) > 100:
             cum_funda    = [x for x in cum_funda if (x[0]>int(l_year)) or ((x[0] == int(l_year)) and (x[1] > l_qtr))]
             if len(cum_funda):
                 x4gsheet.update_funda(symbol, latest_q)
