@@ -1,4 +1,4 @@
-RATING,NSECODE,MCCODE,FCODE,CONS,ISIN,NAME,LISTING_DATE,SECTOR,INDUSTRY,RATIOS
+RATING,NSECODE,MCCODE,FCODE,CONS,ISIN,NAME,LISTING,SECTOR,INDUSTRY,RATIOS
 0,PAGEIND,pi35,pi35,S,INE761H01022,Page Industries Limited,3/16/2007,Textiles,Branded Apparel,SO
 0,GODREJCP,gcp,gcp,C,INE102D01028,Godrej Consumer Products Limited,6/20/2001,Consumer Nondurables,Branded Personal Care,SO
 0,EMAMILTD,e05,e06,C,INE548C01032,Emami Limited,8/3/2006,Consumer Nondurables,Branded Personal Care,SO
@@ -81,4 +81,19 @@ RATING,NSECODE,MCCODE,FCODE,CONS,ISIN,NAME,LISTING_DATE,SECTOR,INDUSTRY,RATIOS
 2,TATAPOWER,tpc,tpc,C,INE245A01021,Tata Power Company Limited,4/3/1996,Utilities,Power Generation and Distribution,SO
 1,TITAN,ti01,ti01,S,INE280A01028,Titan Company Limited,9/24/2004,Consumer Durables,Branded Durables,SO
 2,VSTIND,vst,vst,S,INE710A01016,VST Industries Limited,9/5/2003,Consumer Nondurables,Tobacco,SO
-2,YESBANK,yb,yb,S,INE528G01019,Yes Bank Limited,7/12/2005,Finance,Private Sector Bank,P
+1,YESBANK,yb,yb,S,INE528G01019,Yes Bank Limited,7/12/2005,Finance,Private Sector Bank,P
+2,BANKBARODA,bob,bob,S,INE028A01039,Bank of Baroda,2/19/1997,Finance,Public Sector Bank,P
+2,SKFINDIA,skf,skf01,S,INE640A01023,SKF India Limited,1/27/1999,Manufacturing,Bearings,SO
+2,AMBUJACEM,gac,ac18,C,INE079A01024,Ambuja Cements Limited,2/18/1998,Construction Materials,Cement,SO
+2,GATI,gc18,g04,C,INE152B01027,GATI Limited,10/10/2006,Services,Logistics,SO
+2,SINTEX,si27,si27,C,INE429C01035,Sintex Industries Limited,11/5/1998,Manufacturing,Plastic Products,SO
+1,M&MFIN,mmf04,mmf04,C,INE774D01024,Mahindra & Mahindra Financial Services Limited,3/17/2006,Finance,General Finance,SO
+2,JKTYRE,jki,jkt01,C,INE573A01042,JK Tyre & Industries Limited,3/19/2007,Automotive,Tyres and Rubber Products,SO
+2,APOLLOTYRE,at,at14,C,INE438A01022,Apollo Tyres Limited,5/31/1995,Automotive,Tyres and Rubber Products,SO
+2,ZEEL,zt,zee,C,INE256A01028,Zee Entertainment Enterprises Limited,9/9/1998,Media,TV Broadcasting,SO
+2,ULTRACEMCO,utc,utc01,C,INE481G01011,UltraTech Cement Limited,8/24/2004,Construction Materials,Cement,SO
+2,NMDC,nmd01,nmd02,S,INE584A01023,NMDC Limited,3/3/2008,Metals and Mining,Mining,SO
+1,BAJFINANCE,baf,baf,S,INE296A01016,Bajaj Finance Limited,4/1/2003,Finance,General Finance,SO
+2,GPPL,gpp03,gpp03,S,INE517F01014,Gujarat Pipavav Port Limited,9/9/2010,Services,Ports,SO
+2,HINDALCO,h,hi,S,INE038A01020,Hindalco Industries Limited,1/8/1997,Metals and Mining,Aluminium,SO
+2,INDIGO,ia05,ia04,S,INE646L01027,InterGlobe Aviation Limited,11/10/2015,Services,Airlines,SO
