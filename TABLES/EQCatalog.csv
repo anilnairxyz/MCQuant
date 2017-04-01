@@ -97,3 +97,53 @@ RATING,NSECODE,MCCODE,FCODE,CONS,ISIN,NAME,LISTING,SECTOR,INDUSTRY,RATIOS
 2,GPPL,gpp03,gpp03,S,INE517F01014,Gujarat Pipavav Port Limited,9/9/2010,Services,Ports,SO
 2,HINDALCO,h,hi,S,INE038A01020,Hindalco Industries Limited,1/8/1997,Metals and Mining,Aluminium,SO
 2,INDIGO,ia05,ia04,S,INE646L01027,InterGlobe Aviation Limited,11/10/2015,Services,Airlines,SO
+2,IFBAGRO,ifb,ifb,S,INE076C01018,IFB Agro Industries Limited,4/3/1996,Consumer Nondurables,Alcoholic Beverages,SO
+2,EDL,ed,ed,S,INE180G01019,Empee Distilleries Limited,11/26/2007,Consumer Nondurables,Alcoholic Beverages,S
+2,PIONDIST,pdl,pdl,S,INE889E01010,Pioneer Distilleries Limited,6/15/2010,Consumer Nondurables,Alcoholic Beverages,S
+2,GLOBUSSPR,gs15,gs,S,INE615I01010,Globus Spirits Limited,9/23/2009,Consumer Nondurables,Alcoholic Beverages,S
+2,TI,ti09,ti09,C,INE133E01013,Tilaknagar Industries Limited,7/16/2010,Consumer Nondurables,Alcoholic Beverages,S
+2,GMBREW,gmb,gmb,S,INE075D01018,GM Breweries Limited,8/23/1995,Consumer Nondurables,Alcoholic Beverages,S
+1,RADICO,rk01,rk01,S,INE944F01028,Radico Khaitan Limited,6/18/2003,Consumer Nondurables,Branded Alcoholic Beverages,SO
+2,MANPASAND,mb03,mb04,S,INE122R01018,Manpasand Beverages Limited,7/9/2015,Consumer Nondurables,Branded Beverages,S
+2,PRABHAT,pd07,pd07,C,INE302M01033,Prabhat Dairy Limited,9/21/2015,Consumer Nondurables,Branded Dairy Products,S
+1,KWALITY,kdi01,kdi01,S,INE775B01025,kwality limited,7/5/2011,Consumer Nondurables,Branded Dairy Products,SO
+2,VADILALIND,vi01,vi01,S,INE694D01016,Vadilal Industries Limited,6/15/2011,Consumer Nondurables,Branded Dairy Products,S
+1,HATSUN,hap,hap,S,INE473B01035,Hatsun Agro Product Limited,6/20/2014,Consumer Nondurables,Branded Dairy Products,SO
+1,HERITGFOOD,hfi,hfi,C,INE978A01019,Heritage Foods Limited,11/27/1996,Consumer Nondurables,Branded Foods,SO
+1,KRBL,krb,krb01,C,INE001B01026,KRBL Limited,1/21/2002,Consumer Nondurables,Branded Foods,SO
+2,MIRZAINT,mt03,mi46,S,INE771A01026,Mirza International Limited,4/28/1999,Consumer Nondurables,Branded Footwear,SO
+2,LIBERTSHOE,ls02,ls02,S,INE557B01019,Liberty Shoes Limited,9/27/1995,Consumer Nondurables,Branded Footwear,SO
+1,RELAXO,rf07,rf07,S,INE131B01039,Relaxo Footwears Limited,6/17/2011,Consumer Nondurables,Branded Footwear,SO
+1,BAJAJCORP,bc14,bc02,S,INE933K01021,Bajaj Corp Limited,8/18/2010,Consumer Nondurables,Branded Personal Care,SO
+2,RUCHISOYA,rsi,rsi,S,INE619A01027,Ruchi Soya Industries Limited,1/2/2003,Consumer Nondurables,Edible Oils,S
+2,JHS,jhs01,jhs01,C,INE544H01014,JHS Svendgaard Laboratories Limited,10/21/2006,Consumer Nondurables,Edible Oils,S
+2,IVP,ivp,ivp,S,INE043C01018,IVP Limited,9/13/1995,Consumer Nondurables,Edible Oils,SO
+2,JVLAGRO,jv01,jvl01,S,INE430G01026,JVL Agro Industries Limited,6/17/2011,Consumer Nondurables,Edible Oils,SO
+2,GOKUL,grs,grs,S,INE020J01029,Gokul Refoils and Solvent Limited,6/4/2008,Consumer Nondurables,Edible Oils,SO
+2,VIMALOIL,vof,vof,S,INE067D01015,Vimal Oil & Foods Limited,5/21/2013,Consumer Nondurables,Edible Oils,S
+2,GAEL,gae,gae,S,INE036B01022,Gujarat Ambuja Exports Limited,10/11/2000,Consumer Nondurables,Edible Oils,SO
+2,ANIKINDS,mpg,ai57,S,INE087B01017,Anik Industries Limited,5/21/2008,Consumer Nondurables,Edible Oils,S
+2,SKMEGGPROD,sep,skm,S,INE411D01015,SKM Egg Products Export (India) Limited,3/14/1997,Consumer Nondurables,Food Processing,S
+2,LAKSHMIEFL,loi,lef,C,INE992B01026,Lakshmi Energy and Foods Limited,2/6/2007,Consumer Nondurables,Food Processing,S
+2,KOHINOOR,so01,kf15,S,INE080B01012,Kohinoor Foods Limited,10/20/1999,Consumer Nondurables,Food Processing,S
+2,DAAWAT,lto,ltf,C,INE818H01012,LT Foods Limited,12/18/2006,Consumer Nondurables,Food Processing,SO
+2,UMANGDAIRY,jkd,ud01,S,INE864B01027,Umang Dairies Limited,12/2/2015,Consumer Nondurables,Food Processing,S
+2,ADFFOODS,adf01,af30,C,INE982B01019,ADF Foods Limited,9/15/2010,Consumer Nondurables,Food Processing,S
+2,VENKEYS,wh01,v03,S,INE398A01010,Venky's (India) Limited,7/28/2003,Consumer Nondurables,Food Processing,S
+2,KOKUYOCMLN,c02,c02,S,INE760A01029,Kokuyo Camlin Limited,7/28/2008,Consumer Nondurables,Stationery,S
+2,EVEREADY,eii02,eii02,S,INE128A01029,Eveready Industries India Limited,4/27/2005,Consumer Nondurables,Stationery,S
+2,NIPPOBATRY,in01,nbc,S,INE567A01010,Indo-National Limited,10/6/1999,Consumer Nondurables,Stationery,SO
+2,DHAMPURSUG,dsm,dsm,C,INE041A01016,Dhampur Sugar Mills Limited,3/29/1995,Consumer Nondurables,Stationery,S
+2,ARCHIES,agg,a15,S,INE731A01020,Archies Limited,9/2/1998,Consumer Nondurables,Stationery,S
+2,LINCPEN,lpp,lpp,S,INE802B01019,Linc Pen & Plastics Limited,3/9/2015,Consumer Nondurables,Stationery,SO
+2,MCLEODRUSS,mri02,mri02,S,INE942G01012,Mcleod Russel India Limited,7/29/2005,Consumer Nondurables,Tea and Coffee,S
+2,BBTC,bbt,bbt,S,INE050A01025,Bombay Burmah Trading Corporation Limited,4/3/1996,Consumer Nondurables,Tea and Coffee,S
+2,WILLAMAGOR,wmc,wmc,S,INE210A01017,Williamson Magor & Company Limited,2/8/1995,Consumer Nondurables,Tea and Coffee,S
+2,HARRMALAYA,hm02,hm02,S,INE544A01019,Harrisons Malayalam Limited,2/8/1995,Consumer Nondurables,Tea and Coffee,S
+2,GILLANDERS,gac03,gac03,S,INE047B01011,Gillanders Arbuthnot & Company Limited,12/14/2009,Consumer Nondurables,Tea and Coffee,S
+2,JAYSREETEA,jti,jti,S,INE364A01020,Jayshree Tea & Industries Limited,2/15/1995,Consumer Nondurables,Tea and Coffee,S
+1,CCL,cc10,cc10,C,INE421D01022,CCL Products (India) Limited,6/7/2004,Consumer Nondurables,Tea and Coffee,SO
+2,ROSSELLIND,rt08,rt08,S,INE847C01020,Rossell India Limited,9/25/2012,Consumer Nondurables,Tea and Coffee,S
+2,AVTNPL,avt,avt02,S,INE488D01021,AVT Natural Products Limited,1/10/2007,Consumer Nondurables,Tea and Coffee,SO
+2,GOLDENTOBC,gtc,gt09,S,INE973A01010,Golden Tobacco Limited,2/8/1995,Consumer Nondurables,Tobacco,S
+2,KOTHARIPRO,kp06,kp06,S,INE823A01017,Kothari Products Limited,6/3/1998,Consumer Nondurables,Tobacco,S
