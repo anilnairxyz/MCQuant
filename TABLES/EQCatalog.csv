@@ -147,3 +147,81 @@ RATING,NSECODE,MCCODE,FCODE,CONS,ISIN,NAME,LISTING,SECTOR,INDUSTRY,RATIOS
 2,AVTNPL,avt,avt02,S,INE488D01021,AVT Natural Products Limited,1/10/2007,Consumer Nondurables,Tea and Coffee,SO
 2,GOLDENTOBC,gtc,gt09,S,INE973A01010,Golden Tobacco Limited,2/8/1995,Consumer Nondurables,Tobacco,S
 2,KOTHARIPRO,kp06,kp06,S,INE823A01017,Kothari Products Limited,6/3/1998,Consumer Nondurables,Tobacco,S
+2,BUTTERFLY,ga,ga,S,INE295F01017,Butterfly Gandhimathi Appliances Limited,4/28/2014,Consumer Durables,Branded Appliances,S
+2,KHAITANELE,ke02,ke02,S,INE761A01019,Khaitan Electricals Limited,6/28/2000,Consumer Durables,Branded Appliances,S
+1,BAJAJELEC,be,be,S,INE193E01025,Bajaj Electricals Limited,11/2/2007,Consumer Durables,Branded Appliances,S
+1,LAOPALA,log,lor,S,INE059D01020,La Opala RG Limited,3/16/2007,Consumer Durables,Branded Appliances,SO
+1,VGUARD,vi16,vi02,S,INE951I01019,V-Guard Industries Limited,3/13/2008,Consumer Durables,Branded Appliances,SO
+2,VIPIND,vip,vip,C,INE054A01027,VIP Industries Limited,3/2/2005,Consumer Durables,Branded Durables,SO
+2,SALORAINTL,si24,si24,S,INE924A01013,Salora International Limited,2/15/1995,Consumer Durables,Branded White Goods,S
+2,IFBIND,ifb02,ifb02,S,INE559A01017,IFB Industries Limited,3/29/1995,Consumer Durables,Branded White Goods,SO
+2,FEDDERLOYD,fl,fl,S,INE249C01011,Fedders Lloyd Corporation Limited,9/15/2005,Consumer Durables,Branded White Goods,SO
+1,BLUESTARCO,bs,bs,C,INE472A01039,Blue Star Limited,6/15/2000,Consumer Durables,Branded White Goods,SO
+1,WHIRLPOOL,wi,wi,S,INE716A01013,Whirlpool of India Limited,4/6/2010,Consumer Durables,Branded White Goods,SO
+1,SYMPHONY,scs04,scs04,S,INE225D01027,Symphony Limited,6/15/2011,Consumer Durables,Branded White Goods,SO
+2,VIDEOIND,vlf,vlf,S,INE703A01011,Videocon Industries Limited,7/31/1996,Consumer Durables,Branded White Goods,S
+2,PGEL,pe06,pe06,S,INE457L01011,PG Electroplast Limited,9/26/2011,Consumer Durables,Branded White Goods,S
+2,MIRCELECTR,me,me,S,INE831A01028,MIRC Electronics Limited,5/24/2004,Consumer Durables,Branded White Goods,S
+1,SYNGENE,si62,si10,S,INE398R01022,Syngene International Limited,8/11/2015,Pharmaceuticals,Chemistry,SO
+2,ASTEC,al13,al13,C,INE563J01010,Astec LifeSciences Limited,11/25/2009,Pharmaceuticals,Chemistry,S
+2,NATHBIOGEN,nbg,nbg,S,INE448G01010,Nath Bio-Genes (India) Limited,1/28/2014,Pharmaceuticals,Chemistry,S
+1,HIKAL,hci,h05,S,INE475B01022,Hikal Limited,2/14/2001,Pharmaceuticals,Chemistry,SO
+2,PIRPHYTO,pls,pls,S,INE122J01015,Piramal Phytocare Limited,5/29/2008,Pharmaceuticals,Chemistry,S
+2,MANGALAM,mdo,mdo,S,INE584F01014,Mangalam Drugs And Organics Limited,5/23/2005,Pharmaceuticals,Chemistry,SO
+2,TTKHLTCARE,ttk,ttk,S,INE910C01018,TTK Healthcare Limited,12/2/2015,Pharmaceuticals,Chemistry,SO
+1,JBCHEPHARM,jbc,jbc01,S,INE572A01028,JB Chemicals & Pharmaceuticals Limited,4/29/2003,Pharmaceuticals,Chemistry,SO
+2,BLISSGVS,bcp01,bgv,C,INE416D01022,Bliss GVS Pharma Limited,7/26/2010,Pharmaceuticals,Pharmaceuticals,SO
+2,ALEMBICLTD,acw,a08,S,INE426A01027,Alembic Limited,9/22/1999,Pharmaceuticals,Pharmaceuticals,S
+2,CELESTIAL,cl05,cl05,S,INE221I01017,Celestial Biolabs Limited,7/17/2007,Pharmaceuticals,Pharmaceuticals,SO
+2,PANACEABIO,pb,pb02,S,INE922B01023,Panacea Biotec Limited,4/17/1996,Pharmaceuticals,Pharmaceuticals,S
+2,ALPA,al11,al11,S,INE385I01010,Alpa Laboratories Limited,8/6/2007,Pharmaceuticals,Pharmaceuticals,S
+2,JAGSNPHARM,jp02,jp02,S,INE048B01027,Jagsonpal Pharmaceuticals Limited,3/1/2000,Pharmaceuticals,Pharmaceuticals,SO
+1,ABBOTINDIA,kp,ai51,S,INE358A01014,Abbott India Limited,1/8/2010,Pharmaceuticals,Pharmaceuticals,SO
+2,VENUSREM,vr01,vr01,S,INE411B01019,Venus Remedies Limited,12/20/2006,Pharmaceuticals,Pharmaceuticals,S
+1,AARTIDRUGS,ad,ad,C,INE767A01016,Aarti Drugs Limited,9/19/2003,Pharmaceuticals,Pharmaceuticals,SO
+2,MOREPENLAB,ml06,ml06,S,INE083A01026,Morepen Laboratories Limited,11/24/1999,Pharmaceuticals,Pharmaceuticals,S
+2,BALPHARMA,bp02,bp02,C,INE083D01012,Bal Pharma Limited,5/8/2006,Pharmaceuticals,Pharmaceuticals,S
+2,BROOKS,bl04,bl,S,INE650L01011,Brooks Laboratories Limited,9/5/2011,Pharmaceuticals,Pharmaceuticals,SO
+1,CAPLIPOINT,cpl,cpl,C,INE475E01018,Caplin Point Laboratories Limited,6/23/2014,Pharmaceuticals,Pharmaceuticals,SO
+1,ALKEM,al16,al05,C,INE540L01014,Alkem Laboratories Limited,12/23/2015,Pharmaceuticals,Pharmaceuticals,SO
+2,LYKALABS,ll02,ll02,C,INE933A01014,Lyka Labs Limited,2/8/1995,Pharmaceuticals,Pharmaceuticals,S
+2,INDSWFTLAB,isl,isl,S,INE915B01019,Ind-Swift Laboratories Limited,7/2/1997,Pharmaceuticals,Pharmaceuticals,S
+2,KOPRAN,k01,k01,C,INE082A01010,Kopran Limited,6/9/1999,Pharmaceuticals,Pharmaceuticals,SO
+1,GRANULES,gi22,gi25,C,INE101D01020,Granules India Limited,6/20/2005,Pharmaceuticals,Pharmaceuticals,SO
+1,LINCOLN,lp06,lp06,C,INE405C01035,Lincoln Pharmaceuticals Limited,12/17/2015,Pharmaceuticals,Pharmaceuticals,SO
+1,INDOCO,ir05,ir05,S,INE873D01024,Indoco Remedies Limited,1/14/2005,Pharmaceuticals,Pharmaceuticals,SO
+2,THEMISMED,tc05,tm04,C,INE083B01016,Themis Medicare Limited,4/2/2007,Pharmaceuticals,Pharmaceuticals,S
+1,SHILPAMED,sa04,sm19,C,INE790G01031,Shilpa Medicare Limited,12/3/2009,Pharmaceuticals,Pharmaceuticals,SO
+1,HESTERBIO,hp03,hb01,S,INE782E01017,Hester Biosciences Limited,3/13/2015,Pharmaceuticals,Pharmaceuticals,SO
+1,GUFICBIO,cf02,gb04,S,INE742B01025,Gufic Biosciences Limited,10/19/2004,Pharmaceuticals,Pharmaceuticals,SO
+2,RPGLIFE,rpg03,rpg05,S,INE105J01010,RPG Life Sciences Limited,6/10/2008,Pharmaceuticals,Pharmaceuticals,S
+1,NEULANDLAB,nl,nl,S,INE794A01010,Neuland Laboratories Limited,10/13/2008,Pharmaceuticals,Pharmaceuticals,SO
+2,AMRUTANJAN,a08,ahc01,S,INE098F01023,Amrutanjan Health Care Limited,1/2/2015,Pharmaceuticals,Pharmaceuticals,SO
+1,VIVIMEDLAB,vl07,vl07,C,INE526G01013,Vivimed Labs Limited,11/12/2012,Pharmaceuticals,Pharmaceuticals,SO
+1,SMSPHARMA,sp37,sp38,S,INE812G01025,SMS Pharmaceuticals Limited,2/28/2007,Pharmaceuticals,Pharmaceuticals,SO
+1,NATCOPHARM,np01,np07,C,INE987B01026,Natco Pharma Limited,12/27/1995,Pharmaceuticals,Pharmaceuticals,SO
+1,NECLIFE,nl01,nl01,S,INE023H01027,Nectar Lifesciences Limited,7/18/2005,Pharmaceuticals,Pharmaceuticals,SO
+2,WANBURY,po,w12,S,INE107F01022,Wanbury Limited,1/29/2007,Pharmaceuticals,Pharmaceuticals,S
+1,BIOCON,bl03,bl03,C,INE376G01013,Biocon Limited,4/7/2004,Pharmaceuticals,Pharmaceuticals,SO
+1,SANOFI,hmr,ap26,S,INE058A01010,Sanofi India Limited,5/19/2003,Pharmaceuticals,Pharmaceuticals,SO
+1,WOCKPHARMA,w05,w05,C,INE049B01025,Wockhardt Limited,2/23/2000,Pharmaceuticals,Pharmaceuticals,S
+1,MERCK,emi,m12,S,INE199A01012,Merck Limited,4/24/1996,Pharmaceuticals,Pharmaceuticals,S
+1,APLLTD,ap29,ap35,C,INE901L01018,Alembic Pharmaceuticals Limited,9/20/2011,Pharmaceuticals,Pharmaceuticals,SO
+1,AJANTPHARM,ap22,ap22,C,INE031B01049,Ajanta Pharma Limited,5/29/2000,Pharmaceuticals,Pharmaceuticals,SO
+1,PEL,np07,ph05,C,INE140A01024,Piramal Enterprises Limited,2/8/1995,Pharmaceuticals,Pharmaceuticals,SO
+2,MARKSANS,tp01,mp21,C,INE750C01026,Marksans Pharma Limited,1/21/2002,Pharmaceuticals,Pharmaceuticals,S
+1,UNICHEMLAB,ul02,ul02,S,INE351A01035,Unichem Laboratories Limited,2/7/2001,Pharmaceuticals,Pharmaceuticals,SO
+1,TORNTPHARM,tp06,tp06,C,INE685A01028,Torrent Pharmaceuticals Limited,11/25/2002,Pharmaceuticals,Pharmaceuticals,SO
+1,SUVEN,sp24,sls01,S,INE495B01038,Suven Life Sciences Limited,10/23/2003,Pharmaceuticals,Pharmaceuticals,SO
+1,DIVISLAB,dl03,dl03,S,INE361B01024,Divi's Laboratories Limited,3/12/2003,Pharmaceuticals,Pharmaceuticals,SO
+1,GLAXO,gi,gsk,S,INE159A01016,GlaxoSmithKline Pharmaceuticals Limited,12/15/2000,Pharmaceuticals,Pharmaceuticals,SO
+1,DISHMAN,dpc02,dpc02,C,INE353G01020,Dishman Pharmaceuticals and Chemicals Limited,4/22/2004,Pharmaceuticals,Pharmaceuticals,SO
+2,ASTRAZEN,aid,azp,S,INE203A01020,AstraZeneca Pharma India Limited,5/4/2001,Pharmaceuticals,Pharmaceuticals,S
+1,FDC,fdc,fdc,S,INE258B01022,FDC Limited,8/7/1997,Pharmaceuticals,Pharmaceuticals,SO
+1,CADILAHC,chc,chc,C,INE010B01027,Cadila Healthcare Limited,4/18/2000,Pharmaceuticals,Pharmaceuticals,SO
+1,AUROPHARMA,ap,ap,C,INE406A01037,Aurobindo Pharma Limited,7/19/2000,Pharmaceuticals,Pharmaceuticals,SO
+1,JUBILANT,voc,jo03,C,INE700A01033,Jubilant Life Sciences Limited,6/16/2003,Pharmaceuticals,Pharmaceuticals,SO
+1,IPCALAB,il,il,S,INE571A01020,IPCA Laboratories Limited,2/8/1995,Pharmaceuticals,Pharmaceuticals,SO
+1,SPARC,spa,spa,S,INE232I01014,Sun Pharma Advanced Research Company Limited,7/18/2007,Pharmaceuticals,Pharmaceuticals,S
+1,PFIZER,p,p,S,INE182A01018,Pfizer Limited,4/28/1999,Pharmaceuticals,Pharmaceuticals,SO
+1,STAR,sa10,sa10,C,INE939A01011,Strides Shasun Limited,2/2/2000,Pharmaceuticals,Pharmaceuticals,SO
