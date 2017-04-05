@@ -79,7 +79,7 @@ def funda_leech(symbol, m='C', r='F'):
     catrow    = [x for x in catalog if x[PCAT['NSECODE']]==symbol][0]
     mccode    = catrow[PCAT['FCODE']]
     rep       = catrow[PCAT['CONS']] if r=='F' else r
-    mode      = 'A' if m=='A' else 'C'
+    mode      = 'A' if m=='A' else 'S' if m == 'S' else 'C'
     try_qty   = True if rep == 'A' else False
     report    = 'quarterly' if rep == 'S' else 'cons_quarterly'
     nav       = 'curr'
@@ -125,7 +125,7 @@ def funda_leech(symbol, m='C', r='F'):
         l_date     = datetime.strptime(l_mth+' 30 '+l_year, '%b %d %Y')
         if ((now - l_date).days) > 100:
             cum_funda    = [x for x in cum_funda if (x[0]>int(l_year)) or ((x[0] == int(l_year)) and (x[1] > l_qtr))]
-            if len(cum_funda):
+            if len(cum_funda) and mode == 'C':
                 x4gsheet.update_funda(symbol, latest_q)
             tocsv.extend(cum_funda)
             tocsv.extend(existing)
