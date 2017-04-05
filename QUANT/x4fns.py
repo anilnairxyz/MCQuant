@@ -174,5 +174,4 @@ def multiplot_df(A={}, B={}, C={}, D={}):
         ddf         = D['DF'][cols]
         ddf         = ddf.set_index([D['X']])
         ddf.plot(title=D['title'], secondary_y=D['Z'], linewidth=2, legend=None, ax=axes[1,1])
-    plt.grid(True)
     plt.show()

@@ -107,12 +107,20 @@ if __name__ == '__main__':
     parser.add_argument("stock", help="name of stock")
     parser.add_argument("window", help="duration in trading days", type=int)
     args        = parser.parse_args()
-    if args.stock == 'NIFTY':
+    if args.stock == 'NIFTY' and args.window:
         plot_value  = 'SP'
-    else:
+    elif args.window:
         plot_value  = 'SIOP'
-    quiet       = False
-    if 'S' in plot_value:
+    else:
+        plot_value  = 'SIOPF'
+    quiet       = True
+    if 'S' in plot_value and 'F' in plot_value:
+        annualized    = annualize_funda(args.stock, 'SALES')
+        df            = pd.DataFrame(annualized, columns=['YEAR', 'QTR', 'SALES'])
+        df            = df.iloc[::-1]
+        title         = 'S' if quiet else args.stock+' Sales'
+        A = {'DF':df, 'title': title, 'X': 'YEAR', 'Y': ['SALES'], 'Z': []}
+    elif 'S' in plot_value:
         expanded      = expand_funda(args.stock, 'SALES', args.window)
         df            = pd.DataFrame(expanded, columns=['DATE', 'PRICE', 'SALES'])
         df['RATIO_S'] = df['PRICE'] / df['SALES']
@@ -122,10 +130,17 @@ if __name__ == '__main__':
         df['UPPER_S'] = df['MEAN_S'] + df['RATIO_S'].std()
         df['LOWER_S'] = df['MEAN_S'] - df['RATIO_S'].std() 
         title         = 'S' if quiet else args.stock+' Sales'
-        A = {'DF':df, 'title':title, 'X': 'DATE', 'Y': ['RATIO_S', 'MEAN_S', 'UPPER_S', 'LOWER_S'], 'Z': ['PRICE']}
+        A = ({'DF':df, 'title': title, 'X': 'DATE',
+              'Y': ['RATIO_S', 'MEAN_S', 'UPPER_S', 'LOWER_S'], 'Z': ['PRICE']})
     else:
         A = {}
-    if 'I' in plot_value:
+    if 'I' in plot_value and 'F' in plot_value:
+        annualized    = annualize_funda(args.stock, 'INCOME')
+        df            = pd.DataFrame(annualized, columns=['YEAR', 'QTR', 'INCOME'])
+        df            = df.iloc[::-1]
+        title         = 'I' if quiet else args.stock+' Income'
+        B = {'DF':df, 'title': title, 'X': 'YEAR', 'Y': ['INCOME'], 'Z': []}
+    elif 'I' in plot_value:
         expanded      = expand_funda(args.stock, 'INCOME', args.window)
         df            = pd.DataFrame(expanded, columns=['DATE', 'PRICE', 'INCOME'])
         df['RATIO_I'] = df['PRICE'] / df['INCOME']
@@ -135,10 +150,17 @@ if __name__ == '__main__':
         df['UPPER_I'] = df['MEAN_I'] + df['RATIO_I'].std()
         df['LOWER_I'] = df['MEAN_I'] - df['RATIO_I'].std() 
         title         = 'I' if quiet else args.stock+' Income'
-        B = {'DF':df, 'title':title, 'X': 'DATE', 'Y': ['RATIO_I', 'MEAN_I', 'UPPER_I', 'LOWER_I'], 'Z': ['PRICE']}
+        B = ({'DF':df, 'title': title, 'X': 'DATE',
+              'Y': ['RATIO_I', 'MEAN_I', 'UPPER_I', 'LOWER_I'], 'Z': ['PRICE']})
     else:
         B = {}
-    if 'O' in plot_value:
+    if 'O' in plot_value and 'F' in plot_value:
+        annualized    = annualize_funda(args.stock, 'OPP')
+        df            = pd.DataFrame(annualized, columns=['YEAR', 'QTR', 'OPP'])
+        df            = df.iloc[::-1]
+        title         = 'O' if quiet else args.stock+' OpP'
+        C = {'DF':df, 'title': title, 'X': 'YEAR', 'Y': ['OPP'], 'Z': []}
+    elif 'O' in plot_value:
         expanded      = expand_funda(args.stock, 'OPP', args.window)
         df            = pd.DataFrame(expanded, columns=['DATE', 'PRICE', 'OPP'])
         df['RATIO_O'] = df['PRICE'] / df['OPP']
@@ -148,10 +170,17 @@ if __name__ == '__main__':
         df['UPPER_O'] = df['MEAN_O'] + df['RATIO_O'].std()
         df['LOWER_O'] = df['MEAN_O'] - df['RATIO_O'].std() 
         title         = 'O' if quiet else args.stock+' OpP'
-        C = {'DF':df, 'title':title, 'X': 'DATE', 'Y': ['RATIO_O', 'MEAN_O', 'UPPER_O', 'LOWER_O'], 'Z': ['PRICE']}
+        C = ({'DF':df, 'title': title, 'X': 'DATE',
+              'Y': ['RATIO_O', 'MEAN_O', 'UPPER_O', 'LOWER_O'], 'Z': ['PRICE']})
     else:
         C = {}
-    if 'P' in plot_value:
+    if 'P' in plot_value and 'F' in plot_value:
+        annualized    = annualize_funda(args.stock, 'PAT')
+        df            = pd.DataFrame(annualized, columns=['YEAR', 'QTR', 'PAT'])
+        df            = df.iloc[::-1]
+        title         = 'P' if quiet else args.stock+' Profit'
+        D = {'DF':df, 'title': title, 'X': 'YEAR', 'Y': ['PAT'], 'Z': []}
+    elif 'P' in plot_value:
         expanded      = expand_funda(args.stock, 'PAT', args.window)
         df            = pd.DataFrame(expanded, columns=['DATE', 'PRICE', 'PAT'])
         df['RATIO_P'] = df['PRICE'] / df['PAT']
@@ -161,7 +190,8 @@ if __name__ == '__main__':
         df['UPPER_P'] = df['MEAN_P'] + df['RATIO_P'].std()
         df['LOWER_P'] = df['MEAN_P'] - df['RATIO_P'].std() 
         title         = 'P' if quiet else args.stock+' Profit'
-        D = {'DF':df, 'title':title, 'X': 'DATE', 'Y': ['RATIO_P', 'MEAN_P', 'UPPER_P', 'LOWER_P'], 'Z': ['PRICE']}
+        D = ({'DF':df, 'title': title, 'X': 'DATE',
+              'Y': ['RATIO_P', 'MEAN_P', 'UPPER_P', 'LOWER_P'], 'Z': ['PRICE']})
     else:
         D = {}
     x4fns.multiplot_df(A=A, B=B, C=C, D=D)
