@@ -1,227 +1,227 @@
-RATING,NSECODE,MCCODE,FCODE,CONS,ISIN,NAME,LISTING,SECTOR,INDUSTRY,RATIOS
-0,PAGEIND,pi35,pi35,S,INE761H01022,Page Industries Limited,3/16/2007,Textiles,Branded Apparel,SO
-0,GODREJCP,gcp,gcp,C,INE102D01028,Godrej Consumer Products Limited,6/20/2001,Consumer Nondurables,Branded Personal Care,SO
-0,EMAMILTD,e05,e06,C,INE548C01032,Emami Limited,8/3/2006,Consumer Nondurables,Branded Personal Care,SO
-0,BRITANNIA,bi,bi,C,INE216A01022,Britannia Industries Limited,11/5/1998,Consumer Nondurables,Branded Foods,SO
-0,MARICO,mi25,m13,C,INE196A01026,Marico Limited,5/1/1996,Consumer Nondurables,Branded Personal Care,SO
-0,DABUR,di,di,C,INE016A01026,Dabur India Limited,4/28/1999,Consumer Nondurables,Branded Diversified FMCG,SO
-0,ITC,itc,itc,S,INE154A01025,ITC Limited,8/23/1995,Consumer Nondurables,Branded Diversified FMCG,SO
-0,UBL,ubb,ub02,S,INE686F01025,United Breweries Limited,7/28/2008,Consumer Nondurables,Branded Alcoholic Beverages,S
-0,PIDILITIND,pi11,pi11,C,INE318A01026,Pidilite Industries Limited,3/29/1995,Chemicals,Branded Chemicals,SO
-0,ASIANPAINT,api,ap31,C,INE021A01026,Asian Paints Limited,5/31/1995,Chemicals,Branded Paints,SO
-1,SUNPHARMA,spi,spi,C,INE044A01036,Sun Pharmaceuticals Industries Limited,2/8/1995,Pharmaceuticals,Pharmaceuticals,SO
-1,LUPIN,lc03,l,C,INE326A01037,Lupin Limited,9/10/2001,Pharmaceuticals,Pharmaceuticals,SO
-1,JUBLFOOD,jf04,jf04,S,INE797F01012,Jubilant Foodworks Limited,2/8/2010,Services,Restaurants,SO
-0,APOLLOHOSP,ahe,ahe,S,INE437A01024,Apollo Hospitals Enterprise Limited,1/10/1996,Services,Healthcare,SO
-0,EICHERMOT,em,em,C,INE066A01013,Eicher Motors Limited,9/7/2004,Automotive,2 and 3 wheelers,SO
-0,HINDUNILVR,hl,hu,S,INE030A01027,Hindustan Unilever Limited,7/6/1995,Consumer Nondurables,Branded Diversified FMCG,SO
-0,PGHH,pgi,pgh,S,INE179A01014,Procter & Gamble Hygiene and Health Care Limited,7/7/2004,Consumer Nondurables,Branded Personal Care,SO
-0,NESTLEIND,ni,ni,S,INE239A01016,Nestle India Limited,1/8/2010,Consumer Nondurables,Branded Foods,SO
-0,GSKCONS,sb,gsc04,S,INE264A01014,GlaxoSmithKline Consumer Healthcare Limited,6/16/2003,Consumer Nondurables,Branded Foods,SO
-0,COLPAL,cpi,cpi,S,INE259A01022,Colgate Palmolive (India) Limited,12/17/2007,Consumer Nondurables,Branded Personal Care,SO
-0,3MINDIA,b3m,mi42,S,INE470A01017,3M India Limited,8/13/2004,Chemicals,Branded Chemicals,SO
-0,GILLETTE,isp,gi22,S,INE322A01010,Gillette India Limited,7/30/2003,Consumer Nondurables,Branded Personal Care,S
-1,MCDOWELL-N,mc08,us,S,INE854D01016,United Spirits Limited,9/27/2001,Consumer Nondurables,Branded Alcoholic Beverages,S
-1,BATAINDIA,bi01,bi01,S,INE176A01028,Bata India Limited,6/18/2003,Consumer Nondurables,Branded Footwear,SO
-1,GODREJIND,gs,gi23,C,INE233A01035,Godrej Industries Limited,2/25/2003,Consumer Nondurables,Branded Personal Care,SO
-1,TTKPRESTIG,ttk02,ttk02,S,INE690A01010,TTK Prestige Limited,12/22/1999,Consumer Durables,Branded Appliances,SO
-1,JYOTHYLAB,jl,jl,C,INE668F01031,Jyothy Laboratories Limited,12/19/2007,Consumer Nondurables,Branded Personal Care,SO
-1,ZYDUSWELL,cna,zw01,C,INE768C01010,Zydus Wellness Limited,11/13/2009,Consumer Nondurables,Branded Foods,SO
-1,MONSANTO,mci01,mi39,S,INE274B01011,Monsanto India Limited,1/19/2000,Chemicals,Agrochemicals,SO
-1,BAYERCROP,hsa01,bc12,S,INE462A01022,Bayer Cropscience Limited,1/8/2010,Chemicals,Agrochemicals,SO
-1,INFY,it,it,C,INE009A01021,Infosys Limited,2/8/1995,Technology,IT Consulting,SO
-1,WIPRO,w,w,C,INE075A01022,Wipro Limited,11/8/1995,Technology,IT Consulting,SO
-1,TCS,tcs,tcs,C,INE467B01029,Tata Consultancy Services Limited,8/25/2004,Technology,IT Consulting,SO
-1,HCLTECH,hcl02,hcl02,C,INE860A01027,HCL Technologies Limited,1/6/2000,Technology,IT Consulting,SO
-1,TECHM,tm4,tm4,C,INE669C01036,Tech Mahindra Limited,8/28/2006,Technology,IT Consulting,SO
-1,HDFCBANK,hdf01,hdf01,S,INE040A01026,HDFC Bank Limited,11/8/1995,Finance,Private Sector Bank,P
-1,HDFC,hdf,hdf,C,INE001A01036,Housing Development Finance Corporation Limited,10/23/1996,Finance,Housing Finance,SO
-1,GRUH,gru,gru,S,INE580B01029,Gruh Finance Limited,9/10/2004,Finance,Housing Finance,SO
-0,CRISIL,cri,cri,C,INE007A01025,CRISIL Limited,6/28/1995,Finance,Ratings Research,SO
-0,ICRA,icr,icr,C,INE725G01011,ICRA Limited,4/13/2007,Finance,Ratings Research,SO
-1,CIPLA,c,c,C,INE059A01026,Cipla Limited,2/8/1995,Pharmaceuticals,Pharmaceuticals,SO
-1,TATAMOTORS,tel,tm03,C,INE155A01022,Tata Motors Limited,7/22/1998,Automotive,Cars and Utility Vehicles,SO
-1,MARUTI,mu01,ms24,S,INE585B01010,Maruti Suzuki India Limited,7/9/2003,Automotive,Cars and Utility Vehicles,SO
-1,M&M,mm,mm,S,INE101A01026,Mahindra & Mahindra Limited,1/3/1996,Automotive,Cars and Utility Vehicles,SP
-1,HEROMOTOCO,hhm,hhm,S,INE158A01026,Hero MotoCorp Limited,4/11/2003,Automotive,2 and 3 wheelers,SO
-1,BAJAJ-AUTO,ba06,ba10,C,INE917I01010,Bajaj Auto Limited,5/26/2008,Automotive,2 and 3 wheelers,SO
-1,MRF,mrf,mrf,S,INE883A01011,MRF Limited,9/18/1996,Automotive,Tyres and Rubber Products,SO
-1,LT,lt,lt,C,INE018A01030,Larsen & Toubro Limited,6/23/2004,Engineering,Diversified,SO
-2,ABB,abb,abb,S,INE117A01022,ABB India Limited,2/8/1995,Engineering Equipment,Electrical Equipment,SO
-2,ACC,acc,acc06,C,INE012A01025,ACC Limited,11/20/1996,Construction Materials,Cement,SO
-2,ATFL,itc02,atf,S,INE209A01019,Agro Tech Foods Limited,12/6/2002,Consumer Nondurables,Branded Foods,SO
-2,AKZOINDIA,ici,ici,S,INE133A01011,Akzo Nobel India Limited,6/28/2001,Chemicals,Branded Paints,SO
-2,AXISBANK,uti10,ab16,S,INE238A01034,Axis Bank Limited,11/16/1998,Finance,Private Sector Bank,P
-1,BERGEPAINT,bpi02,bpi02,C,INE463A01038,Berger Paints (I) Limited,11/24/1999,Chemicals,Branded Paints,SO
-2,BHEL,bhe,bhe,S,INE257A01026,Bharat Heavy Electricals Limited,11/11/2003,Engineering,Power Infrastructure,S
-2,BHARTIARTL,btv,ba08,C,INE397D01024,Bharti Airtel Limited,2/15/2002,Utilities,Telecom Services,SO
-1,CASTROLIND,ci01,ci01,S,INE172A01027,Castrol India Limited,3/14/2014,Oil and Gas,Branded Lubricants,SO
-2,COALINDIA,ci29,ci11,C,INE522F01014,Coal India Limited,11/4/2010,Metals and Mining,Coal Mining,SO
-2,CONCOR,cci,cci,S,INE111A01017,Container Corporation of India Limited,5/7/1997,Services,Logistics,SO
-1,DRREDDY,drl,drl,C,INE089A01023,Dr. Reddy's Laboratories Limited,5/30/2003,Pharmaceuticals,Pharmaceuticals,SO
-2,ECLERX,es07,es06,C,INE738I01010,eClerx Services Limited,12/31/2007,Technology,BPO,SO
-2,EXIDEIND,ei,ei,S,INE302A01020,Exide Industries Limited,6/17/2003,Automotive,Auto Ancillaries,SP
-2,GAIL,gai,gai,S,INE129A01019,GAIL (India) Limited,4/2/1997,Oil and Gas,Exploration and Production,SO
-2,GLENMARK,gp08,gp08,C,INE935A01035,Glenmark Pharmaceuticals Limited,2/7/2000,Pharmaceuticals,Pharmaceuticals,SO
-1,GODFRYPHLP,gpi,gpi,S,INE260B01028,Godfrey Phillips India Limited,7/24/1996,Consumer Nondurables,Tobacco,SO
-2,ICICIBANK,ici02,ici02,S,INE090A01021,ICICI Bank Limited,9/17/1997,Finance,Private Sector Bank,P
-2,IDEA,ic8,ic8,C,INE669E01016,Idea Cellular Limited,3/9/2007,Utilities,Telecom Services,SO
-1,INDUSINDBK,iib,iib,S,INE095A01012,IndusInd Bank Limited,1/28/1998,Finance,Private Sector Bank,P
-1,KANSAINER,gnp,knp,S,INE531A01024,Kansai Nerolac Paints Limited,9/15/2003,Chemicals,Branded Paints,SO
-1,KOTAKBANK,kmf,kmb,C,INE237A01028,Kotak Mahindra Bank Limited,12/20/1995,Finance,Private Sector Bank,P
-2,LICHSGFIN,lic,lic,S,INE115A01026,LIC Housing Finance Limited,7/29/1998,Finance,Housing Finance,SO
-2,MINDTREE,mc20,mt13,C,INE018I01017,MindTree Limited,3/7/2007,Technology,IT Consulting,SO
-2,NTPC,ntp,ntp,S,INE733E01010,NTPC Limited,11/5/2004,Utilities,Power Generation and Distribution,SO
-2,ONGC,ong,ong,S,INE213A01029,Oil & Natural Gas Corporation Limited,7/19/1995,Oil and Gas,Exploration and Production,SO
-2,RELIANCE,ri,ri,C,INE002A01018,Reliance Industries Limited,11/29/1995,Oil and Gas,Exploration and Production,SO
-2,SIEMENS,s,s,S,INE003A01024,Siemens Limited,9/6/1995,Engineering Equipment,Electrical Equipment,SO
-2,SBIN,sbi,sbi,C,INE062A01020,State Bank of India,3/1/1995,Finance,Public Sector Bank,P
-2,TATACOFFEE,cc23,tc14,C,INE493A01027,Tata Coffee Limited,2/16/2000,Consumer Nondurables,Tea and Coffee,SO
-2,TATAGLOBAL,tt,tt,C,INE192A01025,Tata Global Beverages Limited,11/18/1998,Consumer Nondurables,Branded Beverages,SO
-2,TATAPOWER,tpc,tpc,C,INE245A01021,Tata Power Company Limited,4/3/1996,Utilities,Power Generation and Distribution,SO
-1,TITAN,ti01,ti01,S,INE280A01028,Titan Company Limited,9/24/2004,Consumer Durables,Branded Durables,SO
-2,VSTIND,vst,vst,S,INE710A01016,VST Industries Limited,9/5/2003,Consumer Nondurables,Tobacco,SO
-1,YESBANK,yb,yb,S,INE528G01019,Yes Bank Limited,7/12/2005,Finance,Private Sector Bank,P
-2,BANKBARODA,bob,bob,S,INE028A01039,Bank of Baroda,2/19/1997,Finance,Public Sector Bank,P
-2,SKFINDIA,skf,skf01,S,INE640A01023,SKF India Limited,1/27/1999,Manufacturing,Bearings,SO
-2,AMBUJACEM,gac,ac18,C,INE079A01024,Ambuja Cements Limited,2/18/1998,Construction Materials,Cement,SO
-2,GATI,gc18,g04,C,INE152B01027,GATI Limited,10/10/2006,Services,Logistics,SO
-2,SINTEX,si27,si27,C,INE429C01035,Sintex Industries Limited,11/5/1998,Manufacturing,Plastic Products,SO
-1,M&MFIN,mmf04,mmf04,C,INE774D01024,Mahindra & Mahindra Financial Services Limited,3/17/2006,Finance,General Finance,SO
-2,JKTYRE,jki,jkt01,C,INE573A01042,JK Tyre & Industries Limited,3/19/2007,Automotive,Tyres and Rubber Products,SO
-2,APOLLOTYRE,at,at14,C,INE438A01022,Apollo Tyres Limited,5/31/1995,Automotive,Tyres and Rubber Products,SO
-2,ZEEL,zt,zee,C,INE256A01028,Zee Entertainment Enterprises Limited,9/9/1998,Media,TV Broadcasting,SO
-2,ULTRACEMCO,utc,utc01,C,INE481G01011,UltraTech Cement Limited,8/24/2004,Construction Materials,Cement,SO
-2,NMDC,nmd01,nmd02,S,INE584A01023,NMDC Limited,3/3/2008,Metals and Mining,Mining,SO
-1,BAJFINANCE,baf,baf,S,INE296A01016,Bajaj Finance Limited,4/1/2003,Finance,General Finance,SO
-2,GPPL,gpp03,gpp03,S,INE517F01014,Gujarat Pipavav Port Limited,9/9/2010,Services,Ports,SO
-2,HINDALCO,h,hi,S,INE038A01020,Hindalco Industries Limited,1/8/1997,Metals and Mining,Aluminium,SO
-2,INDIGO,ia05,ia04,S,INE646L01027,InterGlobe Aviation Limited,11/10/2015,Services,Airlines,SO
-2,IFBAGRO,ifb,ifb,S,INE076C01018,IFB Agro Industries Limited,4/3/1996,Consumer Nondurables,Alcoholic Beverages,SO
-2,EDL,ed,ed,S,INE180G01019,Empee Distilleries Limited,11/26/2007,Consumer Nondurables,Alcoholic Beverages,S
-2,PIONDIST,pdl,pdl,S,INE889E01010,Pioneer Distilleries Limited,6/15/2010,Consumer Nondurables,Alcoholic Beverages,S
-2,GLOBUSSPR,gs15,gs,S,INE615I01010,Globus Spirits Limited,9/23/2009,Consumer Nondurables,Alcoholic Beverages,S
-2,TI,ti09,ti09,C,INE133E01013,Tilaknagar Industries Limited,7/16/2010,Consumer Nondurables,Alcoholic Beverages,S
-2,GMBREW,gmb,gmb,S,INE075D01018,GM Breweries Limited,8/23/1995,Consumer Nondurables,Alcoholic Beverages,S
-1,RADICO,rk01,rk01,S,INE944F01028,Radico Khaitan Limited,6/18/2003,Consumer Nondurables,Branded Alcoholic Beverages,SO
-2,MANPASAND,mb03,mb04,S,INE122R01018,Manpasand Beverages Limited,7/9/2015,Consumer Nondurables,Branded Beverages,S
-2,PRABHAT,pd07,pd07,C,INE302M01033,Prabhat Dairy Limited,9/21/2015,Consumer Nondurables,Branded Dairy Products,S
-1,KWALITY,kdi01,kdi01,S,INE775B01025,kwality limited,7/5/2011,Consumer Nondurables,Branded Dairy Products,SO
-2,VADILALIND,vi01,vi01,S,INE694D01016,Vadilal Industries Limited,6/15/2011,Consumer Nondurables,Branded Dairy Products,S
-1,HATSUN,hap,hap,S,INE473B01035,Hatsun Agro Product Limited,6/20/2014,Consumer Nondurables,Branded Dairy Products,SO
-1,HERITGFOOD,hfi,hfi,C,INE978A01019,Heritage Foods Limited,11/27/1996,Consumer Nondurables,Branded Foods,SO
-1,KRBL,krb,krb01,C,INE001B01026,KRBL Limited,1/21/2002,Consumer Nondurables,Branded Foods,SO
-2,MIRZAINT,mt03,mi46,S,INE771A01026,Mirza International Limited,4/28/1999,Consumer Nondurables,Branded Footwear,SO
-2,LIBERTSHOE,ls02,ls02,S,INE557B01019,Liberty Shoes Limited,9/27/1995,Consumer Nondurables,Branded Footwear,SO
-1,RELAXO,rf07,rf07,S,INE131B01039,Relaxo Footwears Limited,6/17/2011,Consumer Nondurables,Branded Footwear,SO
-1,BAJAJCORP,bc14,bc02,S,INE933K01021,Bajaj Corp Limited,8/18/2010,Consumer Nondurables,Branded Personal Care,SO
-2,RUCHISOYA,rsi,rsi,S,INE619A01027,Ruchi Soya Industries Limited,1/2/2003,Consumer Nondurables,Edible Oils,S
-2,JHS,jhs01,jhs01,C,INE544H01014,JHS Svendgaard Laboratories Limited,10/21/2006,Consumer Nondurables,Edible Oils,S
-2,IVP,ivp,ivp,S,INE043C01018,IVP Limited,9/13/1995,Consumer Nondurables,Edible Oils,SO
-2,JVLAGRO,jv01,jvl01,S,INE430G01026,JVL Agro Industries Limited,6/17/2011,Consumer Nondurables,Edible Oils,SO
-2,GOKUL,grs,grs,S,INE020J01029,Gokul Refoils and Solvent Limited,6/4/2008,Consumer Nondurables,Edible Oils,SO
-2,VIMALOIL,vof,vof,S,INE067D01015,Vimal Oil & Foods Limited,5/21/2013,Consumer Nondurables,Edible Oils,S
-2,GAEL,gae,gae,S,INE036B01022,Gujarat Ambuja Exports Limited,10/11/2000,Consumer Nondurables,Edible Oils,SO
-2,ANIKINDS,mpg,ai57,S,INE087B01017,Anik Industries Limited,5/21/2008,Consumer Nondurables,Edible Oils,S
-2,SKMEGGPROD,sep,skm,S,INE411D01015,SKM Egg Products Export (India) Limited,3/14/1997,Consumer Nondurables,Food Processing,S
-2,LAKSHMIEFL,loi,lef,C,INE992B01026,Lakshmi Energy and Foods Limited,2/6/2007,Consumer Nondurables,Food Processing,S
-2,KOHINOOR,so01,kf15,S,INE080B01012,Kohinoor Foods Limited,10/20/1999,Consumer Nondurables,Food Processing,S
-2,DAAWAT,lto,ltf,C,INE818H01012,LT Foods Limited,12/18/2006,Consumer Nondurables,Food Processing,SO
-2,UMANGDAIRY,jkd,ud01,S,INE864B01027,Umang Dairies Limited,12/2/2015,Consumer Nondurables,Food Processing,S
-2,ADFFOODS,adf01,af30,C,INE982B01019,ADF Foods Limited,9/15/2010,Consumer Nondurables,Food Processing,S
-2,VENKEYS,wh01,v03,S,INE398A01010,Venky's (India) Limited,7/28/2003,Consumer Nondurables,Food Processing,S
-2,KOKUYOCMLN,c02,c02,S,INE760A01029,Kokuyo Camlin Limited,7/28/2008,Consumer Nondurables,Stationery,S
-2,EVEREADY,eii02,eii02,S,INE128A01029,Eveready Industries India Limited,4/27/2005,Consumer Nondurables,Stationery,S
-2,NIPPOBATRY,in01,nbc,S,INE567A01010,Indo-National Limited,10/6/1999,Consumer Nondurables,Stationery,SO
-2,DHAMPURSUG,dsm,dsm,C,INE041A01016,Dhampur Sugar Mills Limited,3/29/1995,Consumer Nondurables,Stationery,S
-2,ARCHIES,agg,a15,S,INE731A01020,Archies Limited,9/2/1998,Consumer Nondurables,Stationery,S
-2,LINCPEN,lpp,lpp,S,INE802B01019,Linc Pen & Plastics Limited,3/9/2015,Consumer Nondurables,Stationery,SO
-2,MCLEODRUSS,mri02,mri02,S,INE942G01012,Mcleod Russel India Limited,7/29/2005,Consumer Nondurables,Tea and Coffee,S
-2,BBTC,bbt,bbt,S,INE050A01025,Bombay Burmah Trading Corporation Limited,4/3/1996,Consumer Nondurables,Tea and Coffee,S
-2,WILLAMAGOR,wmc,wmc,S,INE210A01017,Williamson Magor & Company Limited,2/8/1995,Consumer Nondurables,Tea and Coffee,S
-2,HARRMALAYA,hm02,hm02,S,INE544A01019,Harrisons Malayalam Limited,2/8/1995,Consumer Nondurables,Tea and Coffee,S
-2,GILLANDERS,gac03,gac03,S,INE047B01011,Gillanders Arbuthnot & Company Limited,12/14/2009,Consumer Nondurables,Tea and Coffee,S
-2,JAYSREETEA,jti,jti,S,INE364A01020,Jayshree Tea & Industries Limited,2/15/1995,Consumer Nondurables,Tea and Coffee,S
-1,CCL,cc10,cc10,C,INE421D01022,CCL Products (India) Limited,6/7/2004,Consumer Nondurables,Tea and Coffee,SO
-2,ROSSELLIND,rt08,rt08,S,INE847C01020,Rossell India Limited,9/25/2012,Consumer Nondurables,Tea and Coffee,S
-2,AVTNPL,avt,avt02,S,INE488D01021,AVT Natural Products Limited,1/10/2007,Consumer Nondurables,Tea and Coffee,SO
-2,GOLDENTOBC,gtc,gt09,S,INE973A01010,Golden Tobacco Limited,2/8/1995,Consumer Nondurables,Tobacco,S
-2,KOTHARIPRO,kp06,kp06,S,INE823A01017,Kothari Products Limited,6/3/1998,Consumer Nondurables,Tobacco,S
-2,BUTTERFLY,ga,ga,S,INE295F01017,Butterfly Gandhimathi Appliances Limited,4/28/2014,Consumer Durables,Branded Appliances,S
-2,KHAITANELE,ke02,ke02,S,INE761A01019,Khaitan Electricals Limited,6/28/2000,Consumer Durables,Branded Appliances,S
-1,BAJAJELEC,be,be,S,INE193E01025,Bajaj Electricals Limited,11/2/2007,Consumer Durables,Branded Appliances,S
-1,LAOPALA,log,lor,S,INE059D01020,La Opala RG Limited,3/16/2007,Consumer Durables,Branded Appliances,SO
-1,VGUARD,vi16,vi02,S,INE951I01019,V-Guard Industries Limited,3/13/2008,Consumer Durables,Branded Appliances,SO
-2,VIPIND,vip,vip,C,INE054A01027,VIP Industries Limited,3/2/2005,Consumer Durables,Branded Durables,SO
-2,SALORAINTL,si24,si24,S,INE924A01013,Salora International Limited,2/15/1995,Consumer Durables,Branded White Goods,S
-2,IFBIND,ifb02,ifb02,S,INE559A01017,IFB Industries Limited,3/29/1995,Consumer Durables,Branded White Goods,SO
-2,FEDDERLOYD,fl,fl,S,INE249C01011,Fedders Lloyd Corporation Limited,9/15/2005,Consumer Durables,Branded White Goods,SO
-1,BLUESTARCO,bs,bs,C,INE472A01039,Blue Star Limited,6/15/2000,Consumer Durables,Branded White Goods,SO
-1,WHIRLPOOL,wi,wi,S,INE716A01013,Whirlpool of India Limited,4/6/2010,Consumer Durables,Branded White Goods,SO
-1,SYMPHONY,scs04,scs04,S,INE225D01027,Symphony Limited,6/15/2011,Consumer Durables,Branded White Goods,SO
-2,VIDEOIND,vlf,vlf,S,INE703A01011,Videocon Industries Limited,7/31/1996,Consumer Durables,Branded White Goods,S
-2,PGEL,pe06,pe06,S,INE457L01011,PG Electroplast Limited,9/26/2011,Consumer Durables,Branded White Goods,S
-2,MIRCELECTR,me,me,S,INE831A01028,MIRC Electronics Limited,5/24/2004,Consumer Durables,Branded White Goods,S
-1,SYNGENE,si62,si10,S,INE398R01022,Syngene International Limited,8/11/2015,Pharmaceuticals,Chemistry,SO
-2,ASTEC,al13,al13,C,INE563J01010,Astec LifeSciences Limited,11/25/2009,Pharmaceuticals,Chemistry,S
-2,NATHBIOGEN,nbg,nbg,S,INE448G01010,Nath Bio-Genes (India) Limited,1/28/2014,Pharmaceuticals,Chemistry,S
-1,HIKAL,hci,h05,S,INE475B01022,Hikal Limited,2/14/2001,Pharmaceuticals,Chemistry,SO
-2,PIRPHYTO,pls,pls,S,INE122J01015,Piramal Phytocare Limited,5/29/2008,Pharmaceuticals,Chemistry,S
-2,MANGALAM,mdo,mdo,S,INE584F01014,Mangalam Drugs And Organics Limited,5/23/2005,Pharmaceuticals,Chemistry,SO
-2,TTKHLTCARE,ttk,ttk,S,INE910C01018,TTK Healthcare Limited,12/2/2015,Pharmaceuticals,Chemistry,SO
-1,JBCHEPHARM,jbc,jbc01,S,INE572A01028,JB Chemicals & Pharmaceuticals Limited,4/29/2003,Pharmaceuticals,Chemistry,SO
-2,BLISSGVS,bcp01,bgv,C,INE416D01022,Bliss GVS Pharma Limited,7/26/2010,Pharmaceuticals,Pharmaceuticals,SO
-2,ALEMBICLTD,acw,a08,S,INE426A01027,Alembic Limited,9/22/1999,Pharmaceuticals,Pharmaceuticals,S
-2,CELESTIAL,cl05,cl05,S,INE221I01017,Celestial Biolabs Limited,7/17/2007,Pharmaceuticals,Pharmaceuticals,SO
-2,PANACEABIO,pb,pb02,S,INE922B01023,Panacea Biotec Limited,4/17/1996,Pharmaceuticals,Pharmaceuticals,S
-2,ALPA,al11,al11,S,INE385I01010,Alpa Laboratories Limited,8/6/2007,Pharmaceuticals,Pharmaceuticals,S
-2,JAGSNPHARM,jp02,jp02,S,INE048B01027,Jagsonpal Pharmaceuticals Limited,3/1/2000,Pharmaceuticals,Pharmaceuticals,SO
-1,ABBOTINDIA,kp,ai51,S,INE358A01014,Abbott India Limited,1/8/2010,Pharmaceuticals,Pharmaceuticals,SO
-2,VENUSREM,vr01,vr01,S,INE411B01019,Venus Remedies Limited,12/20/2006,Pharmaceuticals,Pharmaceuticals,S
-1,AARTIDRUGS,ad,ad,C,INE767A01016,Aarti Drugs Limited,9/19/2003,Pharmaceuticals,Pharmaceuticals,SO
-2,MOREPENLAB,ml06,ml06,S,INE083A01026,Morepen Laboratories Limited,11/24/1999,Pharmaceuticals,Pharmaceuticals,S
-2,BALPHARMA,bp02,bp02,C,INE083D01012,Bal Pharma Limited,5/8/2006,Pharmaceuticals,Pharmaceuticals,S
-2,BROOKS,bl04,bl,S,INE650L01011,Brooks Laboratories Limited,9/5/2011,Pharmaceuticals,Pharmaceuticals,SO
-1,CAPLIPOINT,cpl,cpl,C,INE475E01018,Caplin Point Laboratories Limited,6/23/2014,Pharmaceuticals,Pharmaceuticals,SO
-1,ALKEM,al16,al05,C,INE540L01014,Alkem Laboratories Limited,12/23/2015,Pharmaceuticals,Pharmaceuticals,SO
-2,LYKALABS,ll02,ll02,C,INE933A01014,Lyka Labs Limited,2/8/1995,Pharmaceuticals,Pharmaceuticals,S
-2,INDSWFTLAB,isl,isl,S,INE915B01019,Ind-Swift Laboratories Limited,7/2/1997,Pharmaceuticals,Pharmaceuticals,S
-2,KOPRAN,k01,k01,C,INE082A01010,Kopran Limited,6/9/1999,Pharmaceuticals,Pharmaceuticals,SO
-1,GRANULES,gi22,gi25,C,INE101D01020,Granules India Limited,6/20/2005,Pharmaceuticals,Pharmaceuticals,SO
-1,LINCOLN,lp06,lp06,C,INE405C01035,Lincoln Pharmaceuticals Limited,12/17/2015,Pharmaceuticals,Pharmaceuticals,SO
-1,INDOCO,ir05,ir05,S,INE873D01024,Indoco Remedies Limited,1/14/2005,Pharmaceuticals,Pharmaceuticals,SO
-2,THEMISMED,tc05,tm04,C,INE083B01016,Themis Medicare Limited,4/2/2007,Pharmaceuticals,Pharmaceuticals,S
-1,SHILPAMED,sa04,sm19,C,INE790G01031,Shilpa Medicare Limited,12/3/2009,Pharmaceuticals,Pharmaceuticals,SO
-1,HESTERBIO,hp03,hb01,S,INE782E01017,Hester Biosciences Limited,3/13/2015,Pharmaceuticals,Pharmaceuticals,SO
-1,GUFICBIO,cf02,gb04,S,INE742B01025,Gufic Biosciences Limited,10/19/2004,Pharmaceuticals,Pharmaceuticals,SO
-2,RPGLIFE,rpg03,rpg05,S,INE105J01010,RPG Life Sciences Limited,6/10/2008,Pharmaceuticals,Pharmaceuticals,S
-1,NEULANDLAB,nl,nl,S,INE794A01010,Neuland Laboratories Limited,10/13/2008,Pharmaceuticals,Pharmaceuticals,SO
-2,AMRUTANJAN,a08,ahc01,S,INE098F01023,Amrutanjan Health Care Limited,1/2/2015,Pharmaceuticals,Pharmaceuticals,SO
-1,VIVIMEDLAB,vl07,vl07,C,INE526G01013,Vivimed Labs Limited,11/12/2012,Pharmaceuticals,Pharmaceuticals,SO
-1,SMSPHARMA,sp37,sp38,S,INE812G01025,SMS Pharmaceuticals Limited,2/28/2007,Pharmaceuticals,Pharmaceuticals,SO
-1,NATCOPHARM,np01,np07,C,INE987B01026,Natco Pharma Limited,12/27/1995,Pharmaceuticals,Pharmaceuticals,SO
-1,NECLIFE,nl01,nl01,S,INE023H01027,Nectar Lifesciences Limited,7/18/2005,Pharmaceuticals,Pharmaceuticals,SO
-2,WANBURY,po,w12,S,INE107F01022,Wanbury Limited,1/29/2007,Pharmaceuticals,Pharmaceuticals,S
-1,BIOCON,bl03,bl03,C,INE376G01013,Biocon Limited,4/7/2004,Pharmaceuticals,Pharmaceuticals,SO
-1,SANOFI,hmr,ap26,S,INE058A01010,Sanofi India Limited,5/19/2003,Pharmaceuticals,Pharmaceuticals,SO
-1,WOCKPHARMA,w05,w05,C,INE049B01025,Wockhardt Limited,2/23/2000,Pharmaceuticals,Pharmaceuticals,S
-1,MERCK,emi,m12,S,INE199A01012,Merck Limited,4/24/1996,Pharmaceuticals,Pharmaceuticals,S
-1,APLLTD,ap29,ap35,C,INE901L01018,Alembic Pharmaceuticals Limited,9/20/2011,Pharmaceuticals,Pharmaceuticals,SO
-1,AJANTPHARM,ap22,ap22,C,INE031B01049,Ajanta Pharma Limited,5/29/2000,Pharmaceuticals,Pharmaceuticals,SO
-1,PEL,np07,ph05,C,INE140A01024,Piramal Enterprises Limited,2/8/1995,Pharmaceuticals,Pharmaceuticals,SO
-2,MARKSANS,tp01,mp21,C,INE750C01026,Marksans Pharma Limited,1/21/2002,Pharmaceuticals,Pharmaceuticals,S
-1,UNICHEMLAB,ul02,ul02,S,INE351A01035,Unichem Laboratories Limited,2/7/2001,Pharmaceuticals,Pharmaceuticals,SO
-1,TORNTPHARM,tp06,tp06,C,INE685A01028,Torrent Pharmaceuticals Limited,11/25/2002,Pharmaceuticals,Pharmaceuticals,SO
-1,SUVEN,sp24,sls01,S,INE495B01038,Suven Life Sciences Limited,10/23/2003,Pharmaceuticals,Pharmaceuticals,SO
-1,DIVISLAB,dl03,dl03,S,INE361B01024,Divi's Laboratories Limited,3/12/2003,Pharmaceuticals,Pharmaceuticals,SO
-1,GLAXO,gi,gsk,S,INE159A01016,GlaxoSmithKline Pharmaceuticals Limited,12/15/2000,Pharmaceuticals,Pharmaceuticals,SO
-1,DISHMAN,dpc02,dpc02,C,INE353G01020,Dishman Pharmaceuticals and Chemicals Limited,4/22/2004,Pharmaceuticals,Pharmaceuticals,SO
-2,ASTRAZEN,aid,azp,S,INE203A01020,AstraZeneca Pharma India Limited,5/4/2001,Pharmaceuticals,Pharmaceuticals,S
-1,FDC,fdc,fdc,S,INE258B01022,FDC Limited,8/7/1997,Pharmaceuticals,Pharmaceuticals,SO
-1,CADILAHC,chc,chc,C,INE010B01027,Cadila Healthcare Limited,4/18/2000,Pharmaceuticals,Pharmaceuticals,SO
-1,AUROPHARMA,ap,ap,C,INE406A01037,Aurobindo Pharma Limited,7/19/2000,Pharmaceuticals,Pharmaceuticals,SO
-1,JUBILANT,voc,jo03,C,INE700A01033,Jubilant Life Sciences Limited,6/16/2003,Pharmaceuticals,Pharmaceuticals,SO
-1,IPCALAB,il,il,S,INE571A01020,IPCA Laboratories Limited,2/8/1995,Pharmaceuticals,Pharmaceuticals,SO
-1,SPARC,spa,spa,S,INE232I01014,Sun Pharma Advanced Research Company Limited,7/18/2007,Pharmaceuticals,Pharmaceuticals,S
-1,PFIZER,p,p,S,INE182A01018,Pfizer Limited,4/28/1999,Pharmaceuticals,Pharmaceuticals,SO
-1,STAR,sa10,sa10,C,INE939A01011,Strides Shasun Limited,2/2/2000,Pharmaceuticals,Pharmaceuticals,SO
+RATING,NSECODE,MCCODE,FCODE,CONS,ISIN,NAME,LISTING,SECTOR,INDUSTRY,RATIOS,MCAP
+0,PAGEIND,pi35,pi35,S,INE761H01022,Page Industries Limited,3/16/2007,Textiles,Branded Apparel,SO,16020
+0,GODREJCP,gcp,gcp,C,INE102D01028,Godrej Consumer Products Limited,6/20/2001,Consumer Nondurables,Branded Personal Care,SO,58018
+0,EMAMILTD,e05,e06,C,INE548C01032,Emami Limited,8/3/2006,Consumer Nondurables,Branded Personal Care,SO,23424
+0,BRITANNIA,bi,bi,C,INE216A01022,Britannia Industries Limited,11/5/1998,Consumer Nondurables,Branded Foods,SO,40272
+0,MARICO,mi25,m13,C,INE196A01026,Marico Limited,5/1/1996,Consumer Nondurables,Branded Personal Care,SO,38979
+0,DABUR,di,di,C,INE016A01026,Dabur India Limited,4/28/1999,Consumer Nondurables,Branded Diversified FMCG,SO,50089
+0,ITC,itc,itc,S,INE154A01025,ITC Limited,8/23/1995,Consumer Nondurables,Branded Diversified FMCG,SO,330443
+0,UBL,ubb,ub02,S,INE686F01025,United Breweries Limited,7/28/2008,Consumer Nondurables,Branded Alcoholic Beverages,S,20273
+0,PIDILITIND,pi11,pi11,C,INE318A01026,Pidilite Industries Limited,3/29/1995,Chemicals,Branded Chemicals,SO,36175
+0,ASIANPAINT,api,ap31,C,INE021A01026,Asian Paints Limited,5/31/1995,Chemicals,Branded Paints,SO,103209
+1,SUNPHARMA,spi,spi,C,INE044A01036,Sun Pharmaceuticals Industries Limited,2/8/1995,Pharmaceuticals,Pharmaceuticals,SO,160357
+1,LUPIN,lc03,l,C,INE326A01037,Lupin Limited,9/10/2001,Pharmaceuticals,Pharmaceuticals,SO,63685
+1,JUBLFOOD,jf04,jf04,S,INE797F01012,Jubilant Foodworks Limited,2/8/2010,Services,Restaurants,SO,6866
+0,APOLLOHOSP,ahe,ahe,S,INE437A01024,Apollo Hospitals Enterprise Limited,1/10/1996,Services,Healthcare,SO,16108
+0,EICHERMOT,em,em,C,INE066A01013,Eicher Motors Limited,9/7/2004,Automotive,2 and 3 wheelers,SO,70306
+0,HINDUNILVR,hl,hu,S,INE030A01027,Hindustan Unilever Limited,7/6/1995,Consumer Nondurables,Branded Diversified FMCG,SO,199617
+0,PGHH,pgi,pgh,S,INE179A01014,Procter & Gamble Hygiene and Health Care Limited,7/7/2004,Consumer Nondurables,Branded Personal Care,SO,23974
+0,NESTLEIND,ni,ni,S,INE239A01016,Nestle India Limited,1/8/2010,Consumer Nondurables,Branded Foods,SO,63995
+0,GSKCONS,sb,gsc04,S,INE264A01014,GlaxoSmithKline Consumer Healthcare Limited,6/16/2003,Consumer Nondurables,Branded Foods,SO,21857
+0,COLPAL,cpi,cpi,S,INE259A01022,Colgate Palmolive (India) Limited,12/17/2007,Consumer Nondurables,Branded Personal Care,SO,27608
+0,3MINDIA,b3m,mi42,S,INE470A01017,3M India Limited,8/13/2004,Chemicals,Branded Chemicals,SO,13421
+0,GILLETTE,isp,gi22,S,INE322A01010,Gillette India Limited,7/30/2003,Consumer Nondurables,Branded Personal Care,S,13629
+1,MCDOWELL-N,mc08,us,S,INE854D01016,United Spirits Limited,9/27/2001,Consumer Nondurables,Branded Alcoholic Beverages,S,29527
+1,BATAINDIA,bi01,bi01,S,INE176A01028,Bata India Limited,6/18/2003,Consumer Nondurables,Branded Footwear,SO,7170
+1,GODREJIND,gs,gi23,C,INE233A01035,Godrej Industries Limited,2/25/2003,Consumer Nondurables,Branded Personal Care,SO,17893
+1,TTKPRESTIG,ttk02,ttk02,S,INE690A01010,TTK Prestige Limited,12/22/1999,Consumer Durables,Branded Appliances,SO,7343
+1,JYOTHYLAB,jl,jl,C,INE668F01031,Jyothy Laboratories Limited,12/19/2007,Consumer Nondurables,Branded Personal Care,SO,6147
+1,ZYDUSWELL,cna,zw01,C,INE768C01010,Zydus Wellness Limited,11/13/2009,Consumer Nondurables,Branded Foods,SO,3382
+1,MONSANTO,mci01,mi39,S,INE274B01011,Monsanto India Limited,1/19/2000,Chemicals,Agrochemicals,SO,4298
+1,BAYERCROP,hsa01,bc12,S,INE462A01022,Bayer Cropscience Limited,1/8/2010,Chemicals,Agrochemicals,SO,13403
+1,INFY,it,it,C,INE009A01021,Infosys Limited,2/8/1995,Technology,IT Consulting,SO,224757
+1,WIPRO,w,w,C,INE075A01022,Wipro Limited,11/8/1995,Technology,IT Consulting,SO,126670
+1,TCS,tcs,tcs,C,INE467B01029,Tata Consultancy Services Limited,8/25/2004,Technology,IT Consulting,SO,478560
+1,HCLTECH,hcl02,hcl02,C,INE860A01027,HCL Technologies Limited,1/6/2000,Technology,IT Consulting,SO,121598
+1,TECHM,tm4,tm4,C,INE669C01036,Tech Mahindra Limited,8/28/2006,Technology,IT Consulting,SO,43065
+1,HDFCBANK,hdf01,hdf01,S,INE040A01026,HDFC Bank Limited,11/8/1995,Finance,Private Sector Bank,P,370247
+1,HDFC,hdf,hdf,C,INE001A01036,Housing Development Finance Corporation Limited,10/23/1996,Finance,Housing Finance,SO,235101
+1,GRUH,gru,gru,S,INE580B01029,Gruh Finance Limited,9/10/2004,Finance,Housing Finance,SO,13768
+0,CRISIL,cri,cri,C,INE007A01025,CRISIL Limited,6/28/1995,Finance,Ratings Research,SO,13990
+0,ICRA,icr,icr,C,INE725G01011,ICRA Limited,4/13/2007,Finance,Ratings Research,SO,4062
+1,CIPLA,c,c,C,INE059A01026,Cipla Limited,2/8/1995,Pharmaceuticals,Pharmaceuticals,SO,47614
+1,TATAMOTORS,tel,tm03,C,INE155A01022,Tata Motors Limited,7/22/1998,Automotive,Cars and Utility Vehicles,SO,149997
+1,MARUTI,mu01,ms24,S,INE585B01010,Maruti Suzuki India Limited,7/9/2003,Automotive,Cars and Utility Vehicles,SO,189474
+1,M&M,mm,mm,S,INE101A01026,Mahindra & Mahindra Limited,1/3/1996,Automotive,Cars and Utility Vehicles,SP,79564
+1,HEROMOTOCO,hhm,hhm,S,INE158A01026,Hero MotoCorp Limited,4/11/2003,Automotive,2 and 3 wheelers,SO,64169
+1,BAJAJ-AUTO,ba06,ba10,C,INE917I01010,Bajaj Auto Limited,5/26/2008,Automotive,2 and 3 wheelers,SO,81719
+1,MRF,mrf,mrf,S,INE883A01011,MRF Limited,9/18/1996,Automotive,Tyres and Rubber Products,SO,25885
+1,LT,lt,lt,C,INE018A01030,Larsen & Toubro Limited,6/23/2004,Engineering,Diversified,SO,157319
+2,ABB,abb,abb,S,INE117A01022,ABB India Limited,2/8/1995,Engineering Equipment,Electrical Equipment,SO,28939
+2,ACC,acc,acc06,C,INE012A01025,ACC Limited,11/20/1996,Construction Materials,Cement,SO,27682
+2,ATFL,itc02,atf,S,INE209A01019,Agro Tech Foods Limited,12/6/2002,Consumer Nondurables,Branded Foods,SO,1347
+2,AKZOINDIA,ici,ici,S,INE133A01011,Akzo Nobel India Limited,6/28/2001,Chemicals,Branded Paints,SO,8774
+2,AXISBANK,uti10,ab16,S,INE238A01034,Axis Bank Limited,11/16/1998,Finance,Private Sector Bank,P,121163
+1,BERGEPAINT,bpi02,bpi02,C,INE463A01038,Berger Paints (I) Limited,11/24/1999,Chemicals,Branded Paints,SO,23249
+2,BHEL,bhe,bhe,S,INE257A01026,Bharat Heavy Electricals Limited,11/11/2003,Engineering,Power Infrastructure,S,42771
+2,BHARTIARTL,btv,ba08,C,INE397D01024,Bharti Airtel Limited,2/15/2002,Utilities,Telecom Services,SO,137769
+1,CASTROLIND,ci01,ci01,S,INE172A01027,Castrol India Limited,3/14/2014,Oil and Gas,Branded Lubricants,SO,21025
+2,COALINDIA,ci29,ci11,C,INE522F01014,Coal India Limited,11/4/2010,Metals and Mining,Coal Mining,SO,176786
+2,CONCOR,cci,cci,S,INE111A01017,Container Corporation of India Limited,5/7/1997,Services,Logistics,SO,27234
+1,DRREDDY,drl,drl,C,INE089A01023,Dr. Reddy's Laboratories Limited,5/30/2003,Pharmaceuticals,Pharmaceuticals,SO,44076
+2,ECLERX,es07,es06,C,INE738I01010,eClerx Services Limited,12/31/2007,Technology,BPO,SO,5504
+2,EXIDEIND,ei,ei,S,INE302A01020,Exide Industries Limited,6/17/2003,Automotive,Auto Ancillaries,SP,19121
+2,GAIL,gai,gai,S,INE129A01019,GAIL (India) Limited,4/2/1997,Oil and Gas,Exploration and Production,SO,65615
+2,GLENMARK,gp08,gp08,C,INE935A01035,Glenmark Pharmaceuticals Limited,2/7/2000,Pharmaceuticals,Pharmaceuticals,SO,24398
+1,GODFRYPHLP,gpi,gpi,S,INE260B01028,Godfrey Phillips India Limited,7/24/1996,Consumer Nondurables,Tobacco,SO,5955
+2,ICICIBANK,ici02,ici02,S,INE090A01021,ICICI Bank Limited,9/17/1997,Finance,Private Sector Bank,P,161944
+2,IDEA,ic8,ic8,C,INE669E01016,Idea Cellular Limited,3/9/2007,Utilities,Telecom Services,SO,31583
+1,INDUSINDBK,iib,iib,S,INE095A01012,IndusInd Bank Limited,1/28/1998,Finance,Private Sector Bank,P,84435
+1,KANSAINER,gnp,knp,S,INE531A01024,Kansai Nerolac Paints Limited,9/15/2003,Chemicals,Branded Paints,SO,20878
+1,KOTAKBANK,kmf,kmb,C,INE237A01028,Kotak Mahindra Bank Limited,12/20/1995,Finance,Private Sector Bank,P,161050
+2,LICHSGFIN,lic,lic,S,INE115A01026,LIC Housing Finance Limited,7/29/1998,Finance,Housing Finance,SO,31723
+2,MINDTREE,mc20,mt13,C,INE018I01017,MindTree Limited,3/7/2007,Technology,IT Consulting,SO,7486
+2,NTPC,ntp,ntp,S,INE733E01010,NTPC Limited,11/5/2004,Utilities,Power Generation and Distribution,SO,138935
+2,ONGC,ong,ong,S,INE213A01029,Oil & Natural Gas Corporation Limited,7/19/1995,Oil and Gas,Exploration and Production,SO,239275
+2,RELIANCE,ri,ri,C,INE002A01018,Reliance Industries Limited,11/29/1995,Oil and Gas,Exploration and Production,SO,456869
+2,SIEMENS,s,s,S,INE003A01024,Siemens Limited,9/6/1995,Engineering Equipment,Electrical Equipment,SO,46404
+2,SBIN,sbi,sbi,C,INE062A01020,State Bank of India,3/1/1995,Finance,Public Sector Bank,P,230147
+2,TATACOFFEE,cc23,tc14,C,INE493A01027,Tata Coffee Limited,2/16/2000,Consumer Nondurables,Tea and Coffee,SO,2355
+2,TATAGLOBAL,tt,tt,C,INE192A01025,Tata Global Beverages Limited,11/18/1998,Consumer Nondurables,Branded Beverages,SO,9460
+2,TATAPOWER,tpc,tpc,C,INE245A01021,Tata Power Company Limited,4/3/1996,Utilities,Power Generation and Distribution,SO,23639
+1,TITAN,ti01,ti01,S,INE280A01028,Titan Company Limited,9/24/2004,Consumer Durables,Branded Durables,SO,43027
+2,VSTIND,vst,vst,S,INE710A01016,VST Industries Limited,9/5/2003,Consumer Nondurables,Tobacco,SO,4589
+1,YESBANK,yb,yb,S,INE528G01019,Yes Bank Limited,7/12/2005,Finance,Private Sector Bank,P,71083
+2,BANKBARODA,bob,bob,S,INE028A01039,Bank of Baroda,2/19/1997,Finance,Public Sector Bank,P,38880
+2,SKFINDIA,skf,skf01,S,INE640A01023,SKF India Limited,1/27/1999,Manufacturing,Bearings,SO,8266
+2,AMBUJACEM,gac,ac18,C,INE079A01024,Ambuja Cements Limited,2/18/1998,Construction Materials,Cement,SO,48432
+2,GATI,gc18,g04,C,INE152B01027,GATI Limited,10/10/2006,Services,Logistics,SO,1244
+2,SINTEX,si27,si27,C,INE429C01035,Sintex Industries Limited,11/5/1998,Manufacturing,Plastic Products,SO,5828
+1,M&MFIN,mmf04,mmf04,C,INE774D01024,Mahindra & Mahindra Financial Services Limited,3/17/2006,Finance,General Finance,SO,19170
+2,JKTYRE,jki,jkt01,C,INE573A01042,JK Tyre & Industries Limited,3/19/2007,Automotive,Tyres and Rubber Products,SO,3126
+2,APOLLOTYRE,at,at14,C,INE438A01022,Apollo Tyres Limited,5/31/1995,Automotive,Tyres and Rubber Products,SO,10867
+2,ZEEL,zt,zee,C,INE256A01028,Zee Entertainment Enterprises Limited,9/9/1998,Media,TV Broadcasting,SO,52498
+2,ULTRACEMCO,utc,utc01,C,INE481G01011,UltraTech Cement Limited,8/24/2004,Construction Materials,Cement,SO,111786
+2,NMDC,nmd01,nmd02,S,INE584A01023,NMDC Limited,3/3/2008,Metals and Mining,Mining,SO,42775
+1,BAJFINANCE,baf,baf,S,INE296A01016,Bajaj Finance Limited,4/1/2003,Finance,General Finance,SO,66387
+2,GPPL,gpp03,gpp03,S,INE517F01014,Gujarat Pipavav Port Limited,9/9/2010,Services,Ports,SO,8131
+2,HINDALCO,h,hi,S,INE038A01020,Hindalco Industries Limited,1/8/1997,Metals and Mining,Aluminium,SO,43560
+2,INDIGO,ia05,ia04,S,INE646L01027,InterGlobe Aviation Limited,11/10/2015,Services,Airlines,SO,37504
+2,IFBAGRO,ifb,ifb,S,INE076C01018,IFB Agro Industries Limited,4/3/1996,Consumer Nondurables,Alcoholic Beverages,SO,418
+2,EDL,ed,ed,S,INE180G01019,Empee Distilleries Limited,11/26/2007,Consumer Nondurables,Alcoholic Beverages,S,97
+2,PIONDIST,pdl,pdl,S,INE889E01010,Pioneer Distilleries Limited,6/15/2010,Consumer Nondurables,Alcoholic Beverages,S,214
+2,GLOBUSSPR,gs15,gs,S,INE615I01010,Globus Spirits Limited,9/23/2009,Consumer Nondurables,Alcoholic Beverages,S,207
+2,TI,ti09,ti09,C,INE133E01013,Tilaknagar Industries Limited,7/16/2010,Consumer Nondurables,Alcoholic Beverages,S,175
+2,GMBREW,gmb,gmb,S,INE075D01018,GM Breweries Limited,8/23/1995,Consumer Nondurables,Alcoholic Beverages,S,658
+1,RADICO,rk01,rk01,S,INE944F01028,Radico Khaitan Limited,6/18/2003,Consumer Nondurables,Branded Alcoholic Beverages,SO,1654
+2,MANPASAND,mb03,mb04,S,INE122R01018,Manpasand Beverages Limited,7/9/2015,Consumer Nondurables,Branded Beverages,S,4068
+2,PRABHAT,pd07,pd07,C,INE302M01033,Prabhat Dairy Limited,9/21/2015,Consumer Nondurables,Branded Dairy Products,S,1192
+1,KWALITY,kdi01,kdi01,S,INE775B01025,kwality limited,7/5/2011,Consumer Nondurables,Branded Dairy Products,SO,3868
+2,VADILALIND,vi01,vi01,S,INE694D01016,Vadilal Industries Limited,6/15/2011,Consumer Nondurables,Branded Dairy Products,S,674
+1,HATSUN,hap,hap,S,INE473B01035,Hatsun Agro Product Limited,6/20/2014,Consumer Nondurables,Branded Dairy Products,SO,8163
+1,HERITGFOOD,hfi,hfi,C,INE978A01019,Heritage Foods Limited,11/27/1996,Consumer Nondurables,Branded Foods,SO,2492
+1,KRBL,krb,krb01,C,INE001B01026,KRBL Limited,1/21/2002,Consumer Nondurables,Branded Foods,SO,9630
+2,MIRZAINT,mt03,mi46,S,INE771A01026,Mirza International Limited,4/28/1999,Consumer Nondurables,Branded Footwear,SO,1046
+2,LIBERTSHOE,ls02,ls02,S,INE557B01019,Liberty Shoes Limited,9/27/1995,Consumer Nondurables,Branded Footwear,SO,287
+1,RELAXO,rf07,rf07,S,INE131B01039,Relaxo Footwears Limited,6/17/2011,Consumer Nondurables,Branded Footwear,SO,5857
+1,BAJAJCORP,bc14,bc02,S,INE933K01021,Bajaj Corp Limited,8/18/2010,Consumer Nondurables,Branded Personal Care,SO,5964
+2,RUCHISOYA,rsi,rsi,S,INE619A01027,Ruchi Soya Industries Limited,1/2/2003,Consumer Nondurables,Edible Oils,S,876
+2,JHS,jhs01,jhs01,C,INE544H01014,JHS Svendgaard Laboratories Limited,10/21/2006,Consumer Nondurables,Edible Oils,S,178
+2,IVP,ivp,ivp,S,INE043C01018,IVP Limited,9/13/1995,Consumer Nondurables,Edible Oils,SO,183
+2,JVLAGRO,jv01,jvl01,S,INE430G01026,JVL Agro Industries Limited,6/17/2011,Consumer Nondurables,Edible Oils,SO,367
+2,GOKUL,grs,grs,S,INE020J01029,Gokul Refoils and Solvent Limited,6/4/2008,Consumer Nondurables,Edible Oils,SO,313
+2,VIMALOIL,vof,vof,S,INE067D01015,Vimal Oil & Foods Limited,5/21/2013,Consumer Nondurables,Edible Oils,S,66
+2,GAEL,gae,gae,S,INE036B01022,Gujarat Ambuja Exports Limited,10/11/2000,Consumer Nondurables,Edible Oils,SO,1613
+2,ANIKINDS,mpg,ai57,S,INE087B01017,Anik Industries Limited,5/21/2008,Consumer Nondurables,Edible Oils,S,77
+2,SKMEGGPROD,sep,skm,S,INE411D01015,SKM Egg Products Export (India) Limited,3/14/1997,Consumer Nondurables,Food Processing,S,208
+2,LAKSHMIEFL,loi,lef,C,INE992B01026,Lakshmi Energy and Foods Limited,2/6/2007,Consumer Nondurables,Food Processing,S,380
+2,KOHINOOR,so01,kf15,S,INE080B01012,Kohinoor Foods Limited,10/20/1999,Consumer Nondurables,Food Processing,S,283
+2,DAAWAT,lto,ltf,C,INE818H01012,LT Foods Limited,12/18/2006,Consumer Nondurables,Food Processing,SO,1686
+2,UMANGDAIRY,jkd,ud01,S,INE864B01027,Umang Dairies Limited,12/2/2015,Consumer Nondurables,Food Processing,S,175
+2,ADFFOODS,adf01,af30,C,INE982B01019,ADF Foods Limited,9/15/2010,Consumer Nondurables,Food Processing,S,365
+2,VENKEYS,wh01,v03,S,INE398A01010,Venky's (India) Limited,7/28/2003,Consumer Nondurables,Food Processing,S,1458
+2,KOKUYOCMLN,c02,c02,S,INE760A01029,Kokuyo Camlin Limited,7/28/2008,Consumer Nondurables,Stationery,S,919
+2,EVEREADY,eii02,eii02,S,INE128A01029,Eveready Industries India Limited,4/27/2005,Consumer Nondurables,Stationery,S,2041
+2,NIPPOBATRY,in01,nbc,S,INE567A01010,Indo-National Limited,10/6/1999,Consumer Nondurables,Stationery,SO,333
+2,DHAMPURSUG,dsm,dsm,C,INE041A01016,Dhampur Sugar Mills Limited,3/29/1995,Consumer Nondurables,Stationery,S,1439
+2,ARCHIES,agg,a15,S,INE731A01020,Archies Limited,9/2/1998,Consumer Nondurables,Stationery,S,93
+2,LINCPEN,lpp,lpp,S,INE802B01019,Linc Pen & Plastics Limited,3/9/2015,Consumer Nondurables,Stationery,SO,420
+2,MCLEODRUSS,mri02,mri02,S,INE942G01012,Mcleod Russel India Limited,7/29/2005,Consumer Nondurables,Tea and Coffee,S,1945
+2,BBTC,bbt,bbt,S,INE050A01025,Bombay Burmah Trading Corporation Limited,4/3/1996,Consumer Nondurables,Tea and Coffee,S,5792
+2,WILLAMAGOR,wmc,wmc,S,INE210A01017,Williamson Magor & Company Limited,2/8/1995,Consumer Nondurables,Tea and Coffee,S,72
+2,HARRMALAYA,hm02,hm02,S,INE544A01019,Harrisons Malayalam Limited,2/8/1995,Consumer Nondurables,Tea and Coffee,S,160
+2,GILLANDERS,gac03,gac03,S,INE047B01011,Gillanders Arbuthnot & Company Limited,12/14/2009,Consumer Nondurables,Tea and Coffee,S,157
+2,JAYSREETEA,jti,jti,S,INE364A01020,Jayshree Tea & Industries Limited,2/15/1995,Consumer Nondurables,Tea and Coffee,S,328
+1,CCL,cc10,cc10,C,INE421D01022,CCL Products (India) Limited,6/7/2004,Consumer Nondurables,Tea and Coffee,SO,4631
+2,ROSSELLIND,rt08,rt08,S,INE847C01020,Rossell India Limited,9/25/2012,Consumer Nondurables,Tea and Coffee,S,454
+2,AVTNPL,avt,avt02,S,INE488D01021,AVT Natural Products Limited,1/10/2007,Consumer Nondurables,Tea and Coffee,SO,704
+2,GOLDENTOBC,gtc,gt09,S,INE973A01010,Golden Tobacco Limited,2/8/1995,Consumer Nondurables,Tobacco,S,132
+2,KOTHARIPRO,kp06,kp06,S,INE823A01017,Kothari Products Limited,6/3/1998,Consumer Nondurables,Tobacco,S,604
+2,BUTTERFLY,ga,ga,S,INE295F01017,Butterfly Gandhimathi Appliances Limited,4/28/2014,Consumer Durables,Branded Appliances,S,357
+2,KHAITANELE,ke02,ke02,S,INE761A01019,Khaitan Electricals Limited,6/28/2000,Consumer Durables,Branded Appliances,S,37
+1,BAJAJELEC,be,be,S,INE193E01025,Bajaj Electricals Limited,11/2/2007,Consumer Durables,Branded Appliances,S,3475
+1,LAOPALA,log,lor,S,INE059D01020,La Opala RG Limited,3/16/2007,Consumer Durables,Branded Appliances,SO,3001
+1,VGUARD,vi16,vi02,S,INE951I01019,V-Guard Industries Limited,3/13/2008,Consumer Durables,Branded Appliances,SO,7717
+2,VIPIND,vip,vip,C,INE054A01027,VIP Industries Limited,3/2/2005,Consumer Durables,Branded Durables,SO,2850
+2,SALORAINTL,si24,si24,S,INE924A01013,Salora International Limited,2/15/1995,Consumer Durables,Branded White Goods,S,55
+2,IFBIND,ifb02,ifb02,S,INE559A01017,IFB Industries Limited,3/29/1995,Consumer Durables,Branded White Goods,SO,2525
+2,FEDDERLOYD,fl,fl,S,INE249C01011,Fedders Lloyd Corporation Limited,9/15/2005,Consumer Durables,Branded White Goods,SO,315
+1,BLUESTARCO,bs,bs,C,INE472A01039,Blue Star Limited,6/15/2000,Consumer Durables,Branded White Goods,SO,6335
+1,WHIRLPOOL,wi,wi,S,INE716A01013,Whirlpool of India Limited,4/6/2010,Consumer Durables,Branded White Goods,SO,15444
+1,SYMPHONY,scs04,scs04,S,INE225D01027,Symphony Limited,6/15/2011,Consumer Durables,Branded White Goods,SO,10571
+2,VIDEOIND,vlf,vlf,S,INE703A01011,Videocon Industries Limited,7/31/1996,Consumer Durables,Branded White Goods,S,3481
+2,PGEL,pe06,pe06,S,INE457L01011,PG Electroplast Limited,9/26/2011,Consumer Durables,Branded White Goods,S,297
+2,MIRCELECTR,me,me,S,INE831A01028,MIRC Electronics Limited,5/24/2004,Consumer Durables,Branded White Goods,S,328
+1,SYNGENE,si62,si10,S,INE398R01022,Syngene International Limited,8/11/2015,Pharmaceuticals,Chemistry,SO,10906
+2,ASTEC,al13,al13,C,INE563J01010,Astec LifeSciences Limited,11/25/2009,Pharmaceuticals,Chemistry,S,1179
+2,NATHBIOGEN,nbg,nbg,S,INE448G01010,Nath Bio-Genes (India) Limited,1/28/2014,Pharmaceuticals,Chemistry,S,306
+1,HIKAL,hci,h05,S,INE475B01022,Hikal Limited,2/14/2001,Pharmaceuticals,Chemistry,SO,1731
+2,PIRPHYTO,pls,pls,S,INE122J01015,Piramal Phytocare Limited,5/29/2008,Pharmaceuticals,Chemistry,S,225
+2,MANGALAM,mdo,mdo,S,INE584F01014,Mangalam Drugs And Organics Limited,5/23/2005,Pharmaceuticals,Chemistry,SO,233
+2,TTKHLTCARE,ttk,ttk,S,INE910C01018,TTK Healthcare Limited,12/2/2015,Pharmaceuticals,Chemistry,SO,612
+1,JBCHEPHARM,jbc,jbc01,S,INE572A01028,JB Chemicals & Pharmaceuticals Limited,4/29/2003,Pharmaceuticals,Chemistry,SO,2983
+2,BLISSGVS,bcp01,bgv,C,INE416D01022,Bliss GVS Pharma Limited,7/26/2010,Pharmaceuticals,Pharmaceuticals,SO,1730
+2,ALEMBICLTD,acw,a08,S,INE426A01027,Alembic Limited,9/22/1999,Pharmaceuticals,Pharmaceuticals,S,1048
+2,CELESTIAL,cl05,cl05,S,INE221I01017,Celestial Biolabs Limited,7/17/2007,Pharmaceuticals,Pharmaceuticals,SO,61
+2,PANACEABIO,pb,pb02,S,INE922B01023,Panacea Biotec Limited,4/17/1996,Pharmaceuticals,Pharmaceuticals,S,982
+2,ALPA,al11,al11,S,INE385I01010,Alpa Laboratories Limited,8/6/2007,Pharmaceuticals,Pharmaceuticals,S,89
+2,JAGSNPHARM,jp02,jp02,S,INE048B01027,Jagsonpal Pharmaceuticals Limited,3/1/2000,Pharmaceuticals,Pharmaceuticals,SO,102
+1,ABBOTINDIA,kp,ai51,S,INE358A01014,Abbott India Limited,1/8/2010,Pharmaceuticals,Pharmaceuticals,SO,10071
+2,VENUSREM,vr01,vr01,S,INE411B01019,Venus Remedies Limited,12/20/2006,Pharmaceuticals,Pharmaceuticals,S,127
+1,AARTIDRUGS,ad,ad,C,INE767A01016,Aarti Drugs Limited,9/19/2003,Pharmaceuticals,Pharmaceuticals,SO,1358
+2,MOREPENLAB,ml06,ml06,S,INE083A01026,Morepen Laboratories Limited,11/24/1999,Pharmaceuticals,Pharmaceuticals,S,935
+2,BALPHARMA,bp02,bp02,C,INE083D01012,Bal Pharma Limited,5/8/2006,Pharmaceuticals,Pharmaceuticals,S,125
+2,BROOKS,bl04,bl,S,INE650L01011,Brooks Laboratories Limited,9/5/2011,Pharmaceuticals,Pharmaceuticals,SO,220
+1,CAPLIPOINT,cpl,cpl,C,INE475E01018,Caplin Point Laboratories Limited,6/23/2014,Pharmaceuticals,Pharmaceuticals,SO,2969
+1,ALKEM,al16,al05,C,INE540L01014,Alkem Laboratories Limited,12/23/2015,Pharmaceuticals,Pharmaceuticals,SO,26303
+2,LYKALABS,ll02,ll02,C,INE933A01014,Lyka Labs Limited,2/8/1995,Pharmaceuticals,Pharmaceuticals,S,120
+2,INDSWFTLAB,isl,isl,S,INE915B01019,Ind-Swift Laboratories Limited,7/2/1997,Pharmaceuticals,Pharmaceuticals,S,160
+2,KOPRAN,k01,k01,C,INE082A01010,Kopran Limited,6/9/1999,Pharmaceuticals,Pharmaceuticals,SO,346
+1,GRANULES,gi22,gi25,C,INE101D01020,Granules India Limited,6/20/2005,Pharmaceuticals,Pharmaceuticals,SO,3166
+1,LINCOLN,lp06,lp06,C,INE405C01035,Lincoln Pharmaceuticals Limited,12/17/2015,Pharmaceuticals,Pharmaceuticals,SO,467
+1,INDOCO,ir05,ir05,S,INE873D01024,Indoco Remedies Limited,1/14/2005,Pharmaceuticals,Pharmaceuticals,SO,2194
+2,THEMISMED,tc05,tm04,C,INE083B01016,Themis Medicare Limited,4/2/2007,Pharmaceuticals,Pharmaceuticals,S,533
+1,SHILPAMED,sa04,sm19,C,INE790G01031,Shilpa Medicare Limited,12/3/2009,Pharmaceuticals,Pharmaceuticals,SO,5420
+1,HESTERBIO,hp03,hb01,S,INE782E01017,Hester Biosciences Limited,3/13/2015,Pharmaceuticals,Pharmaceuticals,SO,762
+1,GUFICBIO,cf02,gb04,S,INE742B01025,Gufic Biosciences Limited,10/19/2004,Pharmaceuticals,Pharmaceuticals,SO,542
+2,RPGLIFE,rpg03,rpg05,S,INE105J01010,RPG Life Sciences Limited,6/10/2008,Pharmaceuticals,Pharmaceuticals,S,752
+1,NEULANDLAB,nl,nl,S,INE794A01010,Neuland Laboratories Limited,10/13/2008,Pharmaceuticals,Pharmaceuticals,SO,1354
+2,AMRUTANJAN,a08,ahc01,S,INE098F01023,Amrutanjan Health Care Limited,1/2/2015,Pharmaceuticals,Pharmaceuticals,SO,913
+1,VIVIMEDLAB,vl07,vl07,C,INE526G01013,Vivimed Labs Limited,11/12/2012,Pharmaceuticals,Pharmaceuticals,SO,824
+1,SMSPHARMA,sp37,sp38,S,INE812G01025,SMS Pharmaceuticals Limited,2/28/2007,Pharmaceuticals,Pharmaceuticals,SO,778
+1,NATCOPHARM,np01,np07,C,INE987B01026,Natco Pharma Limited,12/27/1995,Pharmaceuticals,Pharmaceuticals,SO,15020
+1,NECLIFE,nl01,nl01,S,INE023H01027,Nectar Lifesciences Limited,7/18/2005,Pharmaceuticals,Pharmaceuticals,SO,810
+2,WANBURY,po,w12,S,INE107F01022,Wanbury Limited,1/29/2007,Pharmaceuticals,Pharmaceuticals,S,107
+1,BIOCON,bl03,bl03,C,INE376G01013,Biocon Limited,4/7/2004,Pharmaceuticals,Pharmaceuticals,SO,21983
+1,SANOFI,hmr,ap26,S,INE058A01010,Sanofi India Limited,5/19/2003,Pharmaceuticals,Pharmaceuticals,SO,10728
+1,WOCKPHARMA,w05,w05,C,INE049B01025,Wockhardt Limited,2/23/2000,Pharmaceuticals,Pharmaceuticals,S,8421
+1,MERCK,emi,m12,S,INE199A01012,Merck Limited,4/24/1996,Pharmaceuticals,Pharmaceuticals,S,1899
+1,APLLTD,ap29,ap35,C,INE901L01018,Alembic Pharmaceuticals Limited,9/20/2011,Pharmaceuticals,Pharmaceuticals,SO,11614
+1,AJANTPHARM,ap22,ap22,C,INE031B01049,Ajanta Pharma Limited,5/29/2000,Pharmaceuticals,Pharmaceuticals,SO,15114
+1,PEL,np07,ph05,C,INE140A01024,Piramal Enterprises Limited,2/8/1995,Pharmaceuticals,Pharmaceuticals,SO,33246
+2,MARKSANS,tp01,mp21,C,INE750C01026,Marksans Pharma Limited,1/21/2002,Pharmaceuticals,Pharmaceuticals,S,2122
+1,UNICHEMLAB,ul02,ul02,S,INE351A01035,Unichem Laboratories Limited,2/7/2001,Pharmaceuticals,Pharmaceuticals,SO,2511
+1,TORNTPHARM,tp06,tp06,C,INE685A01028,Torrent Pharmaceuticals Limited,11/25/2002,Pharmaceuticals,Pharmaceuticals,SO,24658
+1,SUVEN,sp24,sls01,S,INE495B01038,Suven Life Sciences Limited,10/23/2003,Pharmaceuticals,Pharmaceuticals,SO,2301
+1,DIVISLAB,dl03,dl03,S,INE361B01024,Divi's Laboratories Limited,3/12/2003,Pharmaceuticals,Pharmaceuticals,SO,16479
+1,GLAXO,gi,gsk,S,INE159A01016,GlaxoSmithKline Pharmaceuticals Limited,12/15/2000,Pharmaceuticals,Pharmaceuticals,SO,23271
+1,DISHMAN,dpc02,dpc02,C,INE353G01020,Dishman Pharmaceuticals and Chemicals Limited,4/22/2004,Pharmaceuticals,Pharmaceuticals,SO,5269
+2,ASTRAZEN,aid,azp,S,INE203A01020,AstraZeneca Pharma India Limited,5/4/2001,Pharmaceuticals,Pharmaceuticals,S,2356
+1,FDC,fdc,fdc,S,INE258B01022,FDC Limited,8/7/1997,Pharmaceuticals,Pharmaceuticals,SO,3656
+1,CADILAHC,chc,chc,C,INE010B01027,Cadila Healthcare Limited,4/18/2000,Pharmaceuticals,Pharmaceuticals,SO,46575
+1,AUROPHARMA,ap,ap,C,INE406A01037,Aurobindo Pharma Limited,7/19/2000,Pharmaceuticals,Pharmaceuticals,SO,38729
+1,JUBILANT,voc,jo03,C,INE700A01033,Jubilant Life Sciences Limited,6/16/2003,Pharmaceuticals,Pharmaceuticals,SO,13033
+1,IPCALAB,il,il,S,INE571A01020,IPCA Laboratories Limited,2/8/1995,Pharmaceuticals,Pharmaceuticals,SO,8016
+1,SPARC,spa,spa,S,INE232I01014,Sun Pharma Advanced Research Company Limited,7/18/2007,Pharmaceuticals,Pharmaceuticals,S,8427
+1,PFIZER,p,p,S,INE182A01018,Pfizer Limited,4/28/1999,Pharmaceuticals,Pharmaceuticals,SO,8398
+1,STAR,sa10,sa10,C,INE939A01011,Strides Shasun Limited,2/2/2000,Pharmaceuticals,Pharmaceuticals,SO,9924
