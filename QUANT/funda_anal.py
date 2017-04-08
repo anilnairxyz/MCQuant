@@ -11,6 +11,16 @@ from dateutil import parser
 from x4defs import *
 import x4fns
 
+def get_marketcap(stock):
+    clog    = x4fns.read_csv(EQCatalog)
+    mcap    = [x[PCAT['MCAP']] for x in clog if x[PCAT['NSECODE']] == stock][0]
+    return int(mcap)
+
+def get_currentprice(stock):
+    tech_data   = x4fns.readall_csv(HISTDIR+stock+CSV)[-1]
+    close       = float(tech_data[PHIST['CLOSE']])
+    return close
+
 def annualize_funda(stock, column):
     raw     = x4fns.read_csv(FUNDADIR+stock+CSV)
     funda   = []
@@ -114,6 +124,8 @@ if __name__ == '__main__':
     else:
         plot_value  = 'SIOPF'
     quiet       = True
+    mcap        = get_marketcap(args.stock)
+    close       = get_currentprice(args.stock)
     if 'S' in plot_value and 'F' in plot_value:
         annualized    = annualize_funda(args.stock, 'SALES')
         df            = pd.DataFrame(annualized, columns=['YEAR', 'QTR', 'SALES'])
@@ -123,9 +135,8 @@ if __name__ == '__main__':
     elif 'S' in plot_value:
         expanded      = expand_funda(args.stock, 'SALES', args.window)
         df            = pd.DataFrame(expanded, columns=['DATE', 'PRICE', 'SALES'])
-        df['RATIO_S'] = df['PRICE'] / df['SALES']
+        df['RATIO_S'] = (df['PRICE'] * mcap) / (df['SALES'] * close)
         df['MEAN_S']  = df['RATIO_S'].mean()
-        df['RATIO_S'] = df['RATIO_S'] / df['MEAN_S']
         df['MEAN_S']  = df['RATIO_S'].mean()
         df['UPPER_S'] = df['MEAN_S'] + df['RATIO_S'].std()
         df['LOWER_S'] = df['MEAN_S'] - df['RATIO_S'].std() 
@@ -143,9 +154,8 @@ if __name__ == '__main__':
     elif 'I' in plot_value:
         expanded      = expand_funda(args.stock, 'INCOME', args.window)
         df            = pd.DataFrame(expanded, columns=['DATE', 'PRICE', 'INCOME'])
-        df['RATIO_I'] = df['PRICE'] / df['INCOME']
+        df['RATIO_I'] = (df['PRICE'] * mcap) / (df['INCOME'] * close)
         df['MEAN_I']  = df['RATIO_I'].mean()
-        df['RATIO_I'] = df['RATIO_I'] / df['MEAN_I']
         df['MEAN_I']  = df['RATIO_I'].mean()
         df['UPPER_I'] = df['MEAN_I'] + df['RATIO_I'].std()
         df['LOWER_I'] = df['MEAN_I'] - df['RATIO_I'].std() 
@@ -163,9 +173,8 @@ if __name__ == '__main__':
     elif 'O' in plot_value:
         expanded      = expand_funda(args.stock, 'OPP', args.window)
         df            = pd.DataFrame(expanded, columns=['DATE', 'PRICE', 'OPP'])
-        df['RATIO_O'] = df['PRICE'] / df['OPP']
+        df['RATIO_O'] = (df['PRICE'] * mcap) / (df['OPP'] * close)
         df['MEAN_O']  = df['RATIO_O'].mean()
-        df['RATIO_O'] = df['RATIO_O'] / df['MEAN_O']
         df['MEAN_O']  = df['RATIO_O'].mean()
         df['UPPER_O'] = df['MEAN_O'] + df['RATIO_O'].std()
         df['LOWER_O'] = df['MEAN_O'] - df['RATIO_O'].std() 
@@ -183,9 +192,8 @@ if __name__ == '__main__':
     elif 'P' in plot_value:
         expanded      = expand_funda(args.stock, 'PAT', args.window)
         df            = pd.DataFrame(expanded, columns=['DATE', 'PRICE', 'PAT'])
-        df['RATIO_P'] = df['PRICE'] / df['PAT']
+        df['RATIO_P'] = (df['PRICE'] * mcap) / (df['PAT'] * close)
         df['MEAN_P']  = df['RATIO_P'].mean()
-        df['RATIO_P'] = df['RATIO_P'] / df['MEAN_P']
         df['MEAN_P']  = df['RATIO_P'].mean()
         df['UPPER_P'] = df['MEAN_P'] + df['RATIO_P'].std()
         df['LOWER_P'] = df['MEAN_P'] - df['RATIO_P'].std() 

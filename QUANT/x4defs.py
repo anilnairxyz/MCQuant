@@ -32,7 +32,7 @@ EQCatalog          = TABLEDIR+'EQCatalog'+CSV
 
 ## Column Names/Types for the EQUITY Databases 
 PCAT            = {'RATING':0,'NSECODE':1,'MCCODE':2,'FCODE':3,'CONS':4,'ISIN':5,\
-        'NAME':6,'LISTING_DATE':7,'SECTOR':8,'INDUSTRY':9,'RATIOS':10}
+                   'NAME':6,'LISTING_DATE':7,'SECTOR':8,'INDUSTRY':9,'RATIOS':10,'MCAP':11}
 PHIST           = {'DATE':0,'OPEN':1,'HIGH':2,'LOW':3,'CLOSE':4,'VOLUME':5}
 PWEEK           = {'DATE':0,'TIME':1,'CLOSE':2,'VOLUME':3}
 PDAY            = {'TIME':0,'CLOSE':1,'VOLUME':2}
