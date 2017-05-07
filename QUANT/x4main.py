@@ -60,6 +60,7 @@ if __name__ == '__main__':
                        '2Y_P_U', '2Y_P_L',
                        '4Y_P_U', '4Y_P_L'
                       ])
+        header.extend(['Sales', 'OPP'])
         funda   = [header]
 
 
@@ -88,38 +89,41 @@ if __name__ == '__main__':
             ltp         = '{0:.2f}'.format(float(tech_data[PHIST['CLOSE']]))
             row         = [stock['symbol']]
             if 'S' in stock['ratios']:
-                s_ru_6m, s_rl_6m = evaluate_bands(stock['symbol'], 'SALES', 126)
+                s_ru_6m, s_rl_6m, sps = evaluate_bands(stock['symbol'], 'SALES', 126, mode='P')
                 s_ru_1y, s_rl_1y = evaluate_bands(stock['symbol'], 'SALES', 252)
                 s_ru_2y, s_rl_2y = evaluate_bands(stock['symbol'], 'SALES', 504)
                 s_ru_4y, s_rl_4y = evaluate_bands(stock['symbol'], 'SALES', 1008)
                 trow = [s_ru_6m, s_rl_6m, s_ru_1y, s_rl_1y, s_ru_2y, s_rl_2y, s_ru_4y, s_rl_4y]
                 row.extend([int(x) if isinstance(x, float) else x for x in trow])
             elif 'I' in stock['ratios']:
-                i_ru_6m, i_rl_6m = evaluate_bands(stock['symbol'], 'INCOME', 252)
+                i_ru_6m, i_rl_6m, sps = evaluate_bands(stock['symbol'], 'INCOME', 126, mode='P')
                 i_ru_1y, i_rl_1y = evaluate_bands(stock['symbol'], 'INCOME', 252)
                 i_ru_2y, i_rl_2y = evaluate_bands(stock['symbol'], 'INCOME', 504)
-                i_ru_4y, i_rl_4y = evaluate_bands(stock['symbol'], 'INCOME', 504)
+                i_ru_4y, i_rl_4y = evaluate_bands(stock['symbol'], 'INCOME', 1008)
                 trow = [i_ru_6m, i_rl_6m, i_ru_1y, i_rl_1y, i_ru_2y, i_rl_2y, i_ru_4y, i_rl_4y]
                 row.extend([int(x) if isinstance(x, float) else x for x in trow])
             else:
+                sps = None
                 row.extend([0, 0, 0, 0, 0, 0, 0, 0])
 
             if 'O' in stock['ratios']:
-                o_ru_6m, o_rl_6m = evaluate_bands(stock['symbol'], 'OPP', 252)
+                o_ru_6m, o_rl_6m, eps = evaluate_bands(stock['symbol'], 'OPP', 126, mode='P')
                 o_ru_1y, o_rl_1y = evaluate_bands(stock['symbol'], 'OPP', 252)
                 o_ru_2y, o_rl_2y = evaluate_bands(stock['symbol'], 'OPP', 504)
-                o_ru_4y, o_rl_4y = evaluate_bands(stock['symbol'], 'OPP', 504)
+                o_ru_4y, o_rl_4y = evaluate_bands(stock['symbol'], 'OPP', 1008)
                 trow = [o_ru_6m, o_rl_6m, o_ru_1y, o_rl_1y, o_ru_2y, o_rl_2y, o_ru_4y, o_rl_4y]
                 row.extend([int(x) if isinstance(x, float) else x for x in trow])
             elif 'P' in stock['ratios']:
-                p_ru_6m, p_rl_6m = evaluate_bands(stock['symbol'], 'PAT', 252)
+                p_ru_6m, p_rl_6m, eps = evaluate_bands(stock['symbol'], 'PAT', 126, mode='P')
                 p_ru_1y, p_rl_1y = evaluate_bands(stock['symbol'], 'PAT', 252)
                 p_ru_2y, p_rl_2y = evaluate_bands(stock['symbol'], 'PAT', 504)
-                p_ru_4y, p_rl_4y = evaluate_bands(stock['symbol'], 'PAT', 504)
+                p_ru_4y, p_rl_4y = evaluate_bands(stock['symbol'], 'PAT', 1008)
                 trow = [p_ru_6m, p_rl_6m, p_ru_1y, p_rl_1y, p_ru_2y, p_rl_2y, p_ru_4y, p_rl_4y]
                 row.extend([int(x) if isinstance(x, float) else x for x in trow])
             else:
+                eps = None
                 row.extend([0, 0, 0, 0, 0, 0, 0, 0])
+            row.extend([sps, eps])
             funda.append(row)
 
     if f_anal:

@@ -84,9 +84,10 @@ def cum_funda(column, window):
     nifty       = list(zip(dates, close, c_expanded))
     return nifty
 
-def evaluate_bands(stock, column, window, stat=False):
+def evaluate_bands(stock, column, window, mode='D'):
     expanded       = expand_funda(stock, column, window)
     if len(expanded):
+        ps_value   = expanded[-1][2]
         ratio      = [x[1]/x[2] for x in expanded]
         rmean      = x4fns.smean(ratio)
         ratio      = [x/rmean for x in ratio]
@@ -106,8 +107,11 @@ def evaluate_bands(stock, column, window, stat=False):
         upper      = 0
         lower      = 0
         slope      = None
-    if stat:
+        ps_value   = 0
+    if mode == 'S': # statistics
         return upper, lower, mean, stdd
+    elif mode == 'P': # per share values
+        return upper, lower, ps_value
     else:
         return upper, lower
 

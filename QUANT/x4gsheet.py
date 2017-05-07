@@ -42,7 +42,7 @@ def update_funda(stock, quarter):
     wks = open_worksheet('MktDashboard', 'FAnalysis')
     cell = wks.find(stock)
     row = cell.row
-    col = cell.col + 9
+    col = cell.col + 19
     wks.update_cell(row, col, quarter)
 
 def update_nifty(table):
