@@ -5,6 +5,8 @@ import sys
 import csv 
 import math
 import re
+from queue import Queue
+from threading import Thread
 from bs4 import BeautifulSoup
 from datetime import datetime, timedelta, date
 from dateutil import parser
@@ -24,6 +26,23 @@ if __name__ == '__main__':
     parser.add_argument("-l", "--leech", help="Leech H: Historic, F:Fundamental")
     parser.add_argument("-a", "--analyse", help="Analyse - F:Fundamentals, C:Nifty")
     args   = parser.parse_args()
+
+    # Define the threading worker
+    class LeechWorker(Thread):
+       def __init__(self, queue):
+           Thread.__init__(self)
+           self.queue = queue
+    
+       def run(self):
+           while True:
+               # Get the work from the queue and expand the tuple
+               symbol, mode = self.queue.get()
+               if mode == 'F':
+                   funda_leech(symbol, 'C', 'F')
+               else:
+                   tech_leech(symbol, mode)
+               self.queue.task_done()
+
 
     # Update the catalog
     if args.catalog:
@@ -65,22 +84,37 @@ if __name__ == '__main__':
 
 
     if args.leech:
+        queue = Queue()
+        # Create 8 worker threads
+        for x in range(8):
+            worker = LeechWorker(queue)
+            # Setting True will let the main thread exit even though the workers are blocking
+            worker.daemon = True
+            worker.start()
+
         # Leech technical information (price / volume)
-        for symbol in [stock['symbol'] for stock in stocks]+['NIFTY']:
-            if 'H' in args.leech:
+        if 'H' in args.leech:
+            for symbol in [stock['symbol'] for stock in stocks]+['NIFTY']:
                 print ("Leeching technical for stock: "+symbol)
-                tech_leech(symbol, 'H')
-            if 'D' in args.leech:
+                queue.put((symbol, 'H'))
+            queue.join()
+        if 'D' in args.leech:
+            for symbol in [stock['symbol'] for stock in stocks]+['NIFTY']:
                 print ("Leeching technical for stock: "+symbol)
-                tech_leech(symbol, 'D')
-            if 'W' in args.leech:
+                queue.put((symbol, 'D'))
+            queue.join()
+        if 'W' in args.leech:
+            for symbol in [stock['symbol'] for stock in stocks]+['NIFTY']:
                 print ("Leeching technical for stock: "+symbol)
-                tech_leech(symbol, 'W')
+                queue.put((symbol, 'W'))
+            queue.join()
+
         # Leech fundamental information (sales, profit etc.)
-        for stock in stocks:
-            if 'F' in args.leech:
+        if 'F' in args.leech:
+            for stock in stocks:
                 print ("Leeching fundamental for stock: "+stock['symbol'])
-                funda_leech(stock['symbol'], 'C', 'F')
+                queue.put((stock['symbol'], 'F'))
+            queue.join()
 
     if f_anal:
         for stock in stocks:
